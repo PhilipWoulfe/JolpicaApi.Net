@@ -2,7 +2,7 @@
 using System.Globalization;
 using Newtonsoft.Json;
 
-namespace JolpiApi.Serialization.Converters
+namespace JolpicaApi.Serialization.Converters
 {
     public class SecondsTimeSpanConverter : JsonConverter
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace JolpiApi.Serialization.Converters
+namespace JolpicaApi.Serialization.Converters
 {
     public class StringTimeSpanConverter : JsonConverter
     {

@@ -2,14 +2,14 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using JolpiApi.Client.Attributes;
-using JolpiApi.Extensions;
-using JolpiApi.Requests;
+using JolpicaApi.Client.Attributes;
+using JolpicaApi.Extensions;
+using JolpicaApi.Requests;
 
-namespace JolpiApi.Client
+namespace JolpicaApi.Client
 {
     /// <summary>
-    /// Builds URLs for Ergast API requests.
+    /// Builds URLs for Jolpica API requests.
     /// </summary>
     public class UrlBuilder : IUrlBuilder
     {

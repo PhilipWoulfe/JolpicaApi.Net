@@ -1,6 +1,6 @@
 using System;
 
-namespace JolpiApi.Client.Attributes
+namespace JolpicaApi.Client.Attributes
 {
     [AttributeUsage(AttributeTargets.Property)]
     public class UrlTerminatorAttribute : Attribute

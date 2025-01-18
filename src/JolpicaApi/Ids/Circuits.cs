@@ -1,4 +1,4 @@
-﻿namespace JolpiApi.Ids
+﻿namespace JolpicaApi.Ids
 {
     /// <summary>
     /// Constants for circuit IDs. The list may not be complete or up to date.

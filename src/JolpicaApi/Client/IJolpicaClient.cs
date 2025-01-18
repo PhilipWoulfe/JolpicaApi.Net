@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
-using JolpiApi.Requests;
-using JolpiApi.Responses;
+using JolpicaApi.Requests;
+using JolpicaApi.Responses;
 
-namespace JolpiApi.Client
+namespace JolpicaApi.Client
 {
     public interface IJolpiClient
     {

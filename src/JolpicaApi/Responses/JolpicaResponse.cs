@@ -1,11 +1,11 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace JolpiApi.Responses
+namespace JolpicaApi.Responses
 {
     // TODO: Use internal/private constructors for all response types?
     /// <summary>
-    /// Base class for responses returned from the Ergast API.
+    /// Base class for responses returned from the Jolpica API.
     /// It contains properties for the request URL, the limit and offset used, and the total number of results for the request.
     /// </summary>
     public abstract class JolpiResponse

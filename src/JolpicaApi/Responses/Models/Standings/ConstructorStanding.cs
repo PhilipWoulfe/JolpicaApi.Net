@@ -1,4 +1,4 @@
-namespace JolpiApi.Responses.Models.Standings
+namespace JolpicaApi.Responses.Models.Standings
 {
     public class ConstructorStanding : Standing
     {

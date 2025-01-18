@@ -1,7 +1,7 @@
 ﻿using System;
-using JolpiApi.Responses;
+using JolpicaApi.Responses;
 
-namespace JolpiApi.Client.Caching
+namespace JolpicaApi.Client.Caching
 {
     public interface IJolpiCache : IDisposable
     {
