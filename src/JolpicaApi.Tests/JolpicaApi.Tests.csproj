@@ -12,7 +12,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\JolpiApi\JolpiApi.csproj" />
+    <ProjectReference Include="..\JolpicaApi\JolpicaApi.csproj" />
   </ItemGroup>
 
   <ItemGroup>
