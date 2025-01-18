@@ -1,4 +1,4 @@
-# Ergast Developer API .NET Client
+# Jolpi Developer API .NET Client
 
 [![license](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://github.com/Krusen/ErgastApi.Net/blob/master/LICENSE.md)
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/kaibsj29lcn9aqt1?svg=true)](https://ci.appveyor.com/project/Krusen/ergastapi-net)
