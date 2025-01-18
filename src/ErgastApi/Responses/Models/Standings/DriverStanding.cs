@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using Newtonsoft.Json;
 
-namespace ErgastApi.Responses.Models.Standings
+namespace JolpiApi.Responses.Models.Standings
 {
     public class DriverStanding : Standing
     {

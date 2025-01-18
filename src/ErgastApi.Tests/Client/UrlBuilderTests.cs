@@ -1,15 +1,14 @@
 ﻿using System;
-using System.Drawing.Printing;
 using System.Linq;
 using System.Threading.Tasks;
-using ErgastApi.Client;
-using ErgastApi.Client.Attributes;
-using ErgastApi.Requests;
-using ErgastApi.Responses;
 using FluentAssertions;
+using JolpiApi.Client;
+using JolpiApi.Requests;
+using JolpiApi.Responses;
+using JolpiApi.Responses.RaceInfo;
 using Xunit;
 
-namespace ErgastApi.Tests.Client
+namespace JolpiApi.Tests.Client
 {
     public class UrlBuilderTests
     {
@@ -95,7 +94,7 @@ namespace ErgastApi.Tests.Client
         [Fact]
         public void UrlTerminator_SegmentIsLast()
         {
-            var request = new MockRequest { First = 1, Alpha = 2, Last = 3};
+            var request = new MockRequest { First = 1, Alpha = 2, Last = 3 };
             var url = UrlBuilder.Build(request);
             url.Should().Be("/first/1/alpha/2/last/3.json");
         }
@@ -135,7 +134,7 @@ namespace ErgastApi.Tests.Client
         [Fact]
         public void Segments_AddsValueEvenIfNameIsNull()
         {
-            var request = new MockRequest { WithoutName = 2};
+            var request = new MockRequest { WithoutName = 2 };
             var url = UrlBuilder.Build(request);
             url.Should().Be("/2/last.json");
         }

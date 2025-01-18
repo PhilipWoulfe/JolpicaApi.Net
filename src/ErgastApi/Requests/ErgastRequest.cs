@@ -1,9 +1,9 @@
 ﻿using System;
-using ErgastApi.Client.Attributes;
-using ErgastApi.Ids;
-using ErgastApi.Responses;
+using JolpiApi.Client.Attributes;
+using JolpiApi.Ids;
+using JolpiApi.Responses;
 
-namespace ErgastApi.Requests
+namespace JolpiApi.Requests
 {
     // ReSharper disable once UnusedTypeParameter
     /// <summary>

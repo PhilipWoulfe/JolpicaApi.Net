@@ -1,7 +1,7 @@
-﻿using ErgastApi.Client.Attributes;
-using ErgastApi.Responses;
+﻿using JolpiApi.Client.Attributes;
+using JolpiApi.Responses.RaceInfo;
 
-namespace ErgastApi.Requests
+namespace JolpiApi.Requests.Standard
 {
     public class SprintResultsRequest : StandardRequest<SprintResultsResponse>
     {

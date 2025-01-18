@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace ErgastApi.Serialization.Converters
+namespace JolpiApi.Serialization.Converters
 {
     public class MillisecondsTimeSpanConverter : JsonConverter
     {
@@ -15,7 +15,7 @@ namespace ErgastApi.Serialization.Converters
         {
             if (reader.TokenType == JsonToken.Integer)
             {
-                var milliseconds = (long) reader.Value;
+                var milliseconds = (long)reader.Value;
                 return TimeSpan.FromMilliseconds(milliseconds);
             }
 

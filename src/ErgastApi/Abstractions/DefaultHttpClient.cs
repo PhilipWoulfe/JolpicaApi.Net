@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace ErgastApi.Abstractions
+namespace JolpiApi.Abstractions
 {
     /// <summary>
     /// Default implementation of the <see cref="IHttpClient"/> interface.

@@ -1,9 +1,9 @@
 ﻿using System;
-using ErgastApi.Serialization;
-using ErgastApi.Serialization.Converters;
+using JolpiApi.Serialization;
+using JolpiApi.Serialization.Converters;
 using Newtonsoft.Json;
 
-namespace ErgastApi.Responses.Models.RaceInfo
+namespace JolpiApi.Responses.Models.RaceInfo
 {
     public class FastestLap
     {
@@ -17,7 +17,7 @@ namespace ErgastApi.Responses.Models.RaceInfo
         [JsonConverter(typeof(StringTimeSpanConverter))]
         public TimeSpan? LapTime { get; private set; }
 
-        [JsonProperty("AverageSpeed")]
+        [JsonProperty(nameof(AverageSpeed))]
         public AverageSpeed AverageSpeed { get; private set; }
     }
 }

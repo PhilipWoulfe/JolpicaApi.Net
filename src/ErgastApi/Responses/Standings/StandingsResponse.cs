@@ -1,7 +1,6 @@
 ﻿using System.Collections.Generic;
-using ErgastApi.Serialization;
 
-namespace ErgastApi.Responses
+namespace JolpiApi.Responses.Standings
 {
     public abstract class StandingsResponse<T> : ErgastResponse
     {

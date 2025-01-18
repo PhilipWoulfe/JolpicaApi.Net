@@ -1,6 +1,6 @@
-﻿using ErgastApi.Ids;
+﻿using JolpiApi.Ids;
 
-namespace ErgastApi.Requests
+namespace JolpiApi.Requests
 {
     /// <summary>
     /// Common interface for all requests, which contains properties for paging and limiting results to a season, round and/or driver.

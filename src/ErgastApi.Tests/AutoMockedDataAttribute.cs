@@ -4,7 +4,7 @@ using AutoFixture.Xunit2;
 using Xunit;
 using Xunit.Sdk;
 
-namespace ErgastApi.Tests
+namespace JolpiApi.Tests
 {
     public class AutoMockedDataAttribute : CompositeDataAttribute
     {

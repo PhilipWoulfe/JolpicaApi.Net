@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Threading.Tasks;
-using ErgastApi.Abstractions;
-using ErgastApi.Client.Caching;
-using ErgastApi.Requests;
-using ErgastApi.Responses;
-using ErgastApi.Serialization;
+using JolpiApi.Abstractions;
+using JolpiApi.Client.Caching;
+using JolpiApi.Requests;
+using JolpiApi.Responses;
+using JolpiApi.Serialization;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 
-namespace ErgastApi.Client
+namespace JolpiApi.Client
 {
     /// <inheritdoc cref="IErgastClient"/> />
     /// <summary>
@@ -26,7 +26,7 @@ namespace ErgastApi.Client
         {
             _apiBase = configuration["ErgastApi:BaseUrl"] ?? "https://api.jolpi.ca/ergast/f1/";
         }
-        
+
         private JsonSerializerSettings SerializerSettings { get; } = new JsonSerializerSettings { ContractResolver = new JsonPathContractResolver() };
 
         /// <summary>
@@ -98,11 +98,9 @@ namespace ErgastApi.Client
             responseMessage.EnsureSuccessStatusCode();
 
             var content = await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
-            var rootResponse = JsonConvert.DeserializeObject<ErgastRootResponse<TResponse>>(content, SerializerSettings);
-
-            if (rootResponse == null)
-                throw new Exception("Received an invalid response." + Environment.NewLine + "Response: " + content);
-
+            var rootResponse = JsonConvert.DeserializeObject<ErgastRootResponse<TResponse>>(content, SerializerSettings) 
+                ?? throw new Exception("Received an invalid response." + Environment.NewLine + "Response: " + content);
+            
             response = rootResponse.Data;
             Cache.AddOrReplace(url, response);
 
@@ -113,7 +111,7 @@ namespace ErgastApi.Client
         /// Ensures the request is valid and otherwise throws an exception.
         /// </summary>
         /// <exception cref="InvalidOperationException">The request is invalid</exception>
-        protected void EnsureValidRequest(IErgastRequest request)
+        protected static void EnsureValidRequest(IErgastRequest request)
         {
             if (request?.Round != null && request?.Season == null)
                 throw new InvalidOperationException("When specifying ErgastRequest.Round you also have to specify ErgastRequest.Season.");

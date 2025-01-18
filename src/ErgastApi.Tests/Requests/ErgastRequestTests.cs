@@ -1,10 +1,10 @@
 ﻿using System;
-using ErgastApi.Requests;
-using ErgastApi.Responses;
 using FluentAssertions;
+using JolpiApi.Requests;
+using JolpiApi.Responses;
 using Xunit;
 
-namespace ErgastApi.Tests.Requests
+namespace JolpiApi.Tests.Requests
 {
     public class ErgastRequestTests
     {

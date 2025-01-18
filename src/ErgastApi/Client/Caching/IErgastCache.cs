@@ -1,7 +1,7 @@
 ﻿using System;
-using ErgastApi.Responses;
+using JolpiApi.Responses;
 
-namespace ErgastApi.Client.Caching
+namespace JolpiApi.Client.Caching
 {
     public interface IErgastCache : IDisposable
     {

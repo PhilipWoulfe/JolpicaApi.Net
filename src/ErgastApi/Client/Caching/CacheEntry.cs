@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ErgastApi.Client.Caching
+namespace JolpiApi.Client.Caching
 {
     public class CacheEntry<T>
     {

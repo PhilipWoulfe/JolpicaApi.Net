@@ -1,8 +1,7 @@
 ﻿using System.Collections.Generic;
-using ErgastApi.Responses.Models.RaceInfo;
-using ErgastApi.Serialization;
+using JolpiApi.Responses.Models.RaceInfo;
 
-namespace ErgastApi.Responses
+namespace JolpiApi.Responses.RaceInfo
 {
     public abstract class RaceResponse<T> : ErgastResponse where T : Race
     {

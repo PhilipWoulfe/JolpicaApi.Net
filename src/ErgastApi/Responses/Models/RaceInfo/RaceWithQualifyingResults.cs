@@ -1,11 +1,11 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace ErgastApi.Responses.Models.RaceInfo
+namespace JolpiApi.Responses.Models.RaceInfo
 {
     public class RaceWithQualifyingResults : Race
     {
-        [JsonProperty("QualifyingResults")]
+        [JsonProperty(nameof(QualifyingResults))]
         public IList<QualifyingResult> QualifyingResults { get; private set; }
     }
 }

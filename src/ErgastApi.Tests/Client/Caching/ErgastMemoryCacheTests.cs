@@ -1,10 +1,10 @@
 ﻿using System;
-using ErgastApi.Client.Caching;
-using ErgastApi.Responses;
 using FluentAssertions;
+using JolpiApi.Client.Caching;
+using JolpiApi.Responses;
 using Xunit;
 
-namespace ErgastApi.Tests.Client.Caching
+namespace JolpiApi.Tests.Client.Caching
 {
     public class ErgastMemoryCacheTests
     {

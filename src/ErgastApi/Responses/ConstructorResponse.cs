@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using ErgastApi.Responses.Models;
-using ErgastApi.Serialization;
+using JolpiApi.Responses.Models;
+using JolpiApi.Serialization;
 
-namespace ErgastApi.Responses
+namespace JolpiApi.Responses
 {
     public class ConstructorResponse : ErgastResponse
     {

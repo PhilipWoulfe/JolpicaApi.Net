@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace ErgastApi.Responses.Models
+namespace JolpiApi.Responses.Models
 {
     public class Constructor
     {

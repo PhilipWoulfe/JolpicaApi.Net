@@ -1,4 +1,4 @@
-namespace ErgastApi.Responses.Models.Standings
+namespace JolpiApi.Responses.Models.Standings
 {
     public abstract class Standing
     {

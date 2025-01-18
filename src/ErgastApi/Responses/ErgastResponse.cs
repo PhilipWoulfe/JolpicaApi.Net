@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace ErgastApi.Responses
+namespace JolpiApi.Responses
 {
     // TODO: Use internal/private constructors for all response types?
     /// <summary>
@@ -45,7 +45,7 @@ namespace ErgastApi.Responses
                 if (Limit <= 0 || Offset <= 0)
                     return 1;
 
-                return (int) Math.Ceiling((double) Offset / Limit) + 1;
+                return (int)Math.Ceiling((double)Offset / Limit) + 1;
             }
         }
 
@@ -59,7 +59,7 @@ namespace ErgastApi.Responses
                 if (Limit <= 0)
                     return 0;
 
-                return (int) Math.Ceiling(TotalResults / (double) Limit);
+                return (int)Math.Ceiling(TotalResults / (double)Limit);
             }
         }
 

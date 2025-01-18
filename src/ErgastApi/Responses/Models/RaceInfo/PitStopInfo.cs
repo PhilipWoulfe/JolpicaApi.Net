@@ -1,8 +1,8 @@
 ﻿using System;
-using ErgastApi.Serialization.Converters;
+using JolpiApi.Serialization.Converters;
 using Newtonsoft.Json;
 
-namespace ErgastApi.Responses.Models.RaceInfo
+namespace JolpiApi.Responses.Models.RaceInfo
 {
     public class PitStopInfo
     {

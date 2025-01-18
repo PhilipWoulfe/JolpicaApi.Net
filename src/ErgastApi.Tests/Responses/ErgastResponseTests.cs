@@ -1,8 +1,8 @@
-﻿using ErgastApi.Responses;
-using FluentAssertions;
+﻿using FluentAssertions;
+using JolpiApi.Responses;
 using Xunit;
 
-namespace ErgastApi.Tests.Responses
+namespace JolpiApi.Tests.Responses
 {
     public class ErgastResponseTests
     {

@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
-using ErgastApi.Client.Attributes;
-using ErgastApi.Extensions;
-using ErgastApi.Requests;
+using JolpiApi.Client.Attributes;
+using JolpiApi.Extensions;
+using JolpiApi.Requests;
 
-namespace ErgastApi.Client
+namespace JolpiApi.Client
 {
     public class UrlBuilder : IUrlBuilder
     {
@@ -77,7 +77,7 @@ namespace ErgastApi.Client
         {
             var value = property.GetValue(request);
             if (value?.GetType().IsEnum() == true)
-                value = (int) value;
+                value = (int)value;
 
             return value?.ToString();
         }

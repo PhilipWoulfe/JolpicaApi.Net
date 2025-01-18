@@ -1,6 +1,6 @@
-using ErgastApi.Responses.Models.Standings;
+using JolpiApi.Responses.Models.Standings;
 
-namespace ErgastApi.Responses
+namespace JolpiApi.Responses.Standings
 {
     public class DriverStandingsResponse : StandingsResponse<DriverStandingsList>
     {
