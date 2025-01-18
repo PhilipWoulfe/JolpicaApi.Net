@@ -8,8 +8,16 @@ using JolpiApi.Requests;
 
 namespace JolpiApi.Client
 {
+    /// <summary>
+    /// Builds URLs for Ergast API requests.
+    /// </summary>
     public class UrlBuilder : IUrlBuilder
     {
+        /// <summary>
+        /// Builds the URL for the given request.
+        /// </summary>
+        /// <param name="request">The request to build the URL for.</param>
+        /// <returns>The built URL as a string.</returns>
         public string Build(IErgastRequest request)
         {
             var segments = GetSegments(request);
@@ -38,6 +46,11 @@ namespace JolpiApi.Client
             return url;
         }
 
+        /// <summary>
+        /// Gets the segments for the given request.
+        /// </summary>
+        /// <param name="request">The request to get the segments for.</param>
+        /// <returns>A list of URL segment information.</returns>
         private static IList<UrlSegmentInfo> GetSegments(IErgastRequest request)
         {
             var segments = new List<UrlSegmentInfo>();
@@ -73,6 +86,12 @@ namespace JolpiApi.Client
             return segments;
         }
 
+        /// <summary>
+        /// Gets the value of the segment for the given property and request.
+        /// </summary>
+        /// <param name="property">The property to get the segment value for.</param>
+        /// <param name="request">The request to get the segment value for.</param>
+        /// <returns>The segment value as a string.</returns>
         private static string GetSegmentValue(PropertyInfo property, IErgastRequest request)
         {
             var value = property.GetValue(request);

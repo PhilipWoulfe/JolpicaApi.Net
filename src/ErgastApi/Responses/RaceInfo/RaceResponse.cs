@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using JolpiApi.Responses.Models.RaceInfo;
+using JolpiApi.Serialization;
 
 namespace JolpiApi.Responses.RaceInfo
 {

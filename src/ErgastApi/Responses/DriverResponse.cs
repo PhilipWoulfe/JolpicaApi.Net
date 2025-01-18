@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using JolpiApi.Responses.Models;
+using JolpiApi.Serialization;
 
 namespace JolpiApi.Responses
 {
