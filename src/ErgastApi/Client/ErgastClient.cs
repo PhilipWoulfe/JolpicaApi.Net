@@ -5,6 +5,7 @@ using ErgastApi.Client.Caching;
 using ErgastApi.Requests;
 using ErgastApi.Responses;
 using ErgastApi.Serialization;
+using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 
 namespace ErgastApi.Client
@@ -15,8 +16,17 @@ namespace ErgastApi.Client
     /// </summary>
     public class ErgastClient : IErgastClient, IDisposable
     {
-        private string _apiBase = "https://api.jolpi.ca/ergast/f1/";
+        private string _apiBase;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="ErgastClient"/> class with the specified configuration.
+        /// </summary>
+        /// <param name="configuration">The configuration containing the API base URL.</param>
+        public ErgastClient(IConfiguration configuration)
+        {
+            _apiBase = configuration["ErgastApi:BaseUrl"] ?? "https://api.jolpi.ca/ergast/f1/";
+        }
+        
         private JsonSerializerSettings SerializerSettings { get; } = new JsonSerializerSettings { ContractResolver = new JsonPathContractResolver() };
 
         /// <summary>
