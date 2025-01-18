@@ -16,7 +16,11 @@ namespace JolpiApi.Client.Caching
     /// <summary>
     /// Provides a memory cache for storing Ergast API responses.
     /// </summary>
-    public class ErgastMemoryCache : IErgastCache
+    /// <remarks>
+    /// Initializes a new instance of the <see cref="ErgastMemoryCache"/> class with a specified cache entry lifetime.
+    /// </remarks>
+    /// <param name="cacheEntryLifetime">The cache entry lifetime.</param>
+    public class ErgastMemoryCache(TimeSpan cacheEntryLifetime) : IErgastCache
     {
         private static readonly TimeSpan DefaultCacheEntryLifetime = TimeSpan.FromHours(1);
 
@@ -29,7 +33,7 @@ namespace JolpiApi.Client.Caching
         /// <summary>
         /// Gets or sets the cache entry lifetime.
         /// </summary>
-        public TimeSpan CacheEntryLifetime { get; set; }
+        public TimeSpan CacheEntryLifetime { get; set; } = cacheEntryLifetime;
 
         /// <summary>
         /// Initializes a new instance of the <see cref="ErgastMemoryCache"/> class with the default cache entry lifetime.
@@ -37,15 +41,6 @@ namespace JolpiApi.Client.Caching
         public ErgastMemoryCache()
             : this(DefaultCacheEntryLifetime)
         {
-        }
-
-        /// <summary>
-        /// Initializes a new instance of the <see cref="ErgastMemoryCache"/> class with a specified cache entry lifetime.
-        /// </summary>
-        /// <param name="cacheEntryLifetime">The cache entry lifetime.</param>
-        public ErgastMemoryCache(TimeSpan cacheEntryLifetime)
-        {
-            CacheEntryLifetime = cacheEntryLifetime;
         }
 
         /// <summary>

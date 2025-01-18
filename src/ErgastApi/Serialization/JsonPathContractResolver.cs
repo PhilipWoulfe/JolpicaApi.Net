@@ -1,17 +1,28 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
+using JolpiApi.Serialization.Converters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
 namespace JolpiApi.Serialization
 {
+    /// <summary>
+    /// A custom contract resolver that supports JSON path properties.
+    /// </summary>
     public class JsonPathContractResolver : DefaultContractResolver
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="JsonPathContractResolver"/> class.
+        /// </summary>
         public JsonPathContractResolver()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="JsonPathContractResolver"/> class with a specified naming strategy.
+        /// </summary>
+        /// <param name="namingStrategy">The naming strategy to use.</param>
         public JsonPathContractResolver(NamingStrategy namingStrategy)
         {
             NamingStrategy = namingStrategy;

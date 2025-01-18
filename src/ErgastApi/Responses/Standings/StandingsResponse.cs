@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using JolpiApi.Serialization;
+using System.Collections.Generic;
 
 namespace JolpiApi.Responses.Standings
 {
