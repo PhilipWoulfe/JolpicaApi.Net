@@ -23,12 +23,12 @@ var configuration = Argument<string>("configuration", "Release");
 // GLOBAL VARIABLES
 ///////////////////////////////////////////////////////////////////////////////
 
-var libraryName = "ErgastApi.Net";
+var libraryName = "JolpiApi.Net";
 
 var sourceFolder = "./";
 
-var xunitRunnerJsonFile = "./src/ErgastApi.Tests/xunit.runner.json";
-var testProjectFile = "./src/ErgastApi.Tests/ErgastApi.Tests.csproj";
+var xunitRunnerJsonFile = "./src/JolpiApi.Tests/xunit.runner.json";
+var testProjectFile = "./src/JolpiApi.Tests/JolpiApi.Tests.csproj";
 var codeCoverageOutput = "coverage.xml";
 var codeCoverageFilter = "+[*]* -[*.Tests]*";
 
