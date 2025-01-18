@@ -1,6 +1,6 @@
 using Newtonsoft.Json;
 
-namespace ErgastApi.Responses.Models.RaceInfo
+namespace JolpiApi.Responses.Models.RaceInfo
 {
     public class AverageSpeed
     {

@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace ErgastApi.Responses.Models.Standings
+namespace JolpiApi.Responses.Models.Standings
 {
     public class ConstructorStandingsList : StandingsList<ConstructorStanding>
     {

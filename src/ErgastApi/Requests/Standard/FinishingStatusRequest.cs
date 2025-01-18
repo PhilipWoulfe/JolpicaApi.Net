@@ -1,8 +1,7 @@
-using ErgastApi.Client.Attributes;
-using ErgastApi.Responses;
-using ErgastApi.Responses.Models;
+using JolpiApi.Responses;
+using JolpiApi.Responses.Models;
 
-namespace ErgastApi.Requests
+namespace JolpiApi.Requests.Standard
 {
     public class FinishingStatusRequest : StandardRequest<FinishingStatusResponse>
     {

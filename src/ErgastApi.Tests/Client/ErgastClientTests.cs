@@ -2,16 +2,16 @@
 using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
-using ErgastApi.Abstractions;
-using ErgastApi.Client;
-using ErgastApi.Client.Caching;
-using ErgastApi.Requests;
-using ErgastApi.Responses;
 using FluentAssertions;
+using JolpiApi.Abstractions;
+using JolpiApi.Client;
+using JolpiApi.Client.Caching;
+using JolpiApi.Requests;
+using JolpiApi.Responses;
 using NSubstitute;
 using Xunit;
 
-namespace ErgastApi.Tests.Client
+namespace JolpiApi.Tests.Client
 {
     public class ErgastClientTests
     {

@@ -1,7 +1,7 @@
-using ErgastApi.Client.Attributes;
-using ErgastApi.Responses;
+using JolpiApi.Client.Attributes;
+using JolpiApi.Responses;
 
-namespace ErgastApi.Requests
+namespace JolpiApi.Requests.Standings
 {
     public abstract class StandingsRequest<TResponse> : ErgastRequest<TResponse> where TResponse : ErgastResponse
     {

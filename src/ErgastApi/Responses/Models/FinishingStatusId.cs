@@ -1,4 +1,4 @@
-﻿namespace ErgastApi.Responses.Models
+﻿namespace JolpiApi.Responses.Models
 {
     public enum FinishingStatusId
     {

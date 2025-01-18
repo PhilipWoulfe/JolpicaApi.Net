@@ -4,7 +4,7 @@
 using System.Reflection;
 #endif
 
-namespace ErgastApi.Extensions
+namespace JolpiApi.Extensions
 {
     internal static class ReflectionExtensions
     {

@@ -1,7 +1,7 @@
-using ErgastApi.Client.Attributes;
-using ErgastApi.Responses;
+using JolpiApi.Client.Attributes;
+using JolpiApi.Responses.Standings;
 
-namespace ErgastApi.Requests
+namespace JolpiApi.Requests.Standings
 {
     public class DriverStandingsRequest : StandingsRequest<DriverStandingsResponse>
     {

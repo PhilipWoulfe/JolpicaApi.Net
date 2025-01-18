@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
-using ErgastApi.Client;
 using FluentAssertions;
+using JolpiApi.Client;
 using Xunit;
 
-namespace ErgastApi.Tests.Client
+namespace JolpiApi.Tests.Client
 {
     public class UrlSegmentInfoTests
     {
@@ -30,7 +30,7 @@ namespace ErgastApi.Tests.Client
             var order3 = new UrlSegmentInfo { Order = 3 };
             var orderNull = new UrlSegmentInfo { Order = null };
             var nameAlpha = new UrlSegmentInfo { Name = "alpha" };
-            var terminator = new UrlSegmentInfo { IsTerminator = true, Order = 1, Name = "zulu"};
+            var terminator = new UrlSegmentInfo { IsTerminator = true, Order = 1, Name = "zulu" };
             var list = new List<UrlSegmentInfo> { orderNull, terminator, nameAlpha, order3 };
 
             // Act

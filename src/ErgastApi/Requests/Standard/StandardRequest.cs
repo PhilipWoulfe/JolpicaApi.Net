@@ -1,8 +1,8 @@
-using ErgastApi.Client.Attributes;
-using ErgastApi.Responses;
-using ErgastApi.Responses.Models;
+using JolpiApi.Client.Attributes;
+using JolpiApi.Responses;
+using JolpiApi.Responses.Models;
 
-namespace ErgastApi.Requests
+namespace JolpiApi.Requests.Standard
 {
     public abstract class StandardRequest<TResponse> : ErgastRequest<TResponse> where TResponse : ErgastResponse
     {

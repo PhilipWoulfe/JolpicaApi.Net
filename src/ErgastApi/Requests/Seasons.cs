@@ -1,4 +1,4 @@
-﻿namespace ErgastApi.Requests
+﻿namespace JolpiApi.Requests
 {
     // TODO: Move to Ids namespace together with Drivers, Circuits etc.? Or the other way around?
     /// <summary>

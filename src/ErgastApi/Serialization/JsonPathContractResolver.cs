@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
-using ErgastApi.Serialization.Converters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace ErgastApi.Serialization
+namespace JolpiApi.Serialization
 {
     public class JsonPathContractResolver : DefaultContractResolver
     {

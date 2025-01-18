@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace ErgastApi.Responses.Models.RaceInfo
+namespace JolpiApi.Responses.Models.RaceInfo
 {
     public abstract class ResultBase
     {
@@ -10,10 +10,10 @@ namespace ErgastApi.Responses.Models.RaceInfo
         [JsonProperty("position")]
         public int Position { get; private set; }
 
-        [JsonProperty("Driver")]
+        [JsonProperty(nameof(Driver))]
         public Driver Driver { get; private set; }
 
-        [JsonProperty("Constructor")]
+        [JsonProperty(nameof(Constructor))]
         public Constructor Constructor { get; private set; }
     }
 }

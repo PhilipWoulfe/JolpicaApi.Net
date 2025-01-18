@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace ErgastApi.Abstractions
+namespace JolpiApi.Abstractions
 {
     /// <summary>
     /// Represents an HTTP client for sending HTTP requests and receiving HTTP responses.

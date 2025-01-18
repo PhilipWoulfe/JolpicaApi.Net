@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\ErgastApi\ErgastApi.csproj" />
+    <ProjectReference Include="..\ErgastApi\JolpiApi.csproj" />
   </ItemGroup>
 
   <ItemGroup>

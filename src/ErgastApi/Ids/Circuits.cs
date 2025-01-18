@@ -1,4 +1,4 @@
-﻿namespace ErgastApi.Ids
+﻿namespace JolpiApi.Ids
 {
     /// <summary>
     /// Constants for circuit IDs. The list may not be complete or up to date.

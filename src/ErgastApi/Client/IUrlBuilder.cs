@@ -1,6 +1,6 @@
-﻿using ErgastApi.Requests;
+﻿using JolpiApi.Requests;
 
-namespace ErgastApi.Client
+namespace JolpiApi.Client
 {
     public interface IUrlBuilder
     {

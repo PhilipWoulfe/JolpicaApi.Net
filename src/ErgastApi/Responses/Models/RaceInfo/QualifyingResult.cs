@@ -1,20 +1,20 @@
 ﻿using System;
-using ErgastApi.Serialization.Converters;
+using JolpiApi.Serialization.Converters;
 using Newtonsoft.Json;
 
-namespace ErgastApi.Responses.Models.RaceInfo
+namespace JolpiApi.Responses.Models.RaceInfo
 {
     public class QualifyingResult : ResultBase
     {
-        [JsonProperty("Q1")]
+        [JsonProperty(nameof(Q1))]
         [JsonConverter(typeof(StringTimeSpanConverter))]
         public TimeSpan? Q1 { get; private set; }
 
-        [JsonProperty("Q2")]
+        [JsonProperty(nameof(Q2))]
         [JsonConverter(typeof(StringTimeSpanConverter))]
         public TimeSpan? Q2 { get; private set; }
 
-        [JsonProperty("Q3")]
+        [JsonProperty(nameof(Q3))]
         [JsonConverter(typeof(StringTimeSpanConverter))]
         public TimeSpan? Q3 { get; private set; }
     }

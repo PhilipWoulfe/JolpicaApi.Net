@@ -1,8 +1,8 @@
 ﻿using System.Threading.Tasks;
-using ErgastApi.Requests;
-using ErgastApi.Responses;
+using JolpiApi.Requests;
+using JolpiApi.Responses;
 
-namespace ErgastApi.Client
+namespace JolpiApi.Client
 {
     public interface IErgastClient
     {

@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace ErgastApi.Responses.Models
+namespace JolpiApi.Responses.Models
 {
     public class Driver
     {

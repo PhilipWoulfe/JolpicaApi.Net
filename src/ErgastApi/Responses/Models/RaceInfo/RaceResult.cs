@@ -1,9 +1,9 @@
 using System;
-using ErgastApi.Serialization;
-using ErgastApi.Serialization.Converters;
+using JolpiApi.Serialization;
+using JolpiApi.Serialization.Converters;
 using Newtonsoft.Json;
 
-namespace ErgastApi.Responses.Models.RaceInfo
+namespace JolpiApi.Responses.Models.RaceInfo
 {
     public class RaceResult : ResultBase
     {
@@ -57,7 +57,7 @@ namespace ErgastApi.Responses.Models.RaceInfo
         /// <summary>
         /// Fastest lap info. Only included from 2004 season and onwards.
         /// </summary>
-        [JsonProperty("FastestLap")]
+        [JsonProperty(nameof(FastestLap))]
         public FastestLap FastestLap { get; private set; }
 
         /// <summary>

@@ -1,4 +1,4 @@
-﻿namespace ErgastApi.Ids
+﻿namespace JolpiApi.Ids
 {
     /// <summary>
     /// Constants for constructor IDs. The list may not always be complete or up to date.

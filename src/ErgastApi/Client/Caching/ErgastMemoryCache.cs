@@ -1,5 +1,9 @@
 using System;
-using ErgastApi.Responses;
+using JolpiApi.Responses;
+
+
+
+
 
 #if NETSTANDARD
 using Microsoft.Extensions.Caching.Memory;
@@ -7,7 +11,7 @@ using Microsoft.Extensions.Caching.Memory;
 using System.Runtime.Caching;
 #endif
 
-namespace ErgastApi.Client.Caching
+namespace JolpiApi.Client.Caching
 {
     /// <summary>
     /// Provides a memory cache for storing Ergast API responses.

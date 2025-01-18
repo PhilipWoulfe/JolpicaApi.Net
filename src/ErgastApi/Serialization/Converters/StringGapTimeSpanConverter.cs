@@ -1,4 +1,4 @@
-﻿namespace ErgastApi.Serialization.Converters
+﻿namespace JolpiApi.Serialization.Converters
 {
     public class StringGapTimeSpanConverter : StringTimeSpanConverter
     {

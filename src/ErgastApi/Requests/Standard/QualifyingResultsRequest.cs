@@ -1,7 +1,6 @@
-using ErgastApi.Client.Attributes;
-using ErgastApi.Responses;
+using JolpiApi.Client.Attributes;
 
-namespace ErgastApi.Requests
+namespace JolpiApi.Requests.Standard
 {
     public class QualifyingResultsRequest : StandardRequest<QualifyingResultsResponse>
     {

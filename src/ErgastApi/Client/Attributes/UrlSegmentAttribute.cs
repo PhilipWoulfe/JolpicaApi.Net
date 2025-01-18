@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace ErgastApi.Client.Attributes
+namespace JolpiApi.Client.Attributes
 {
     /// <summary>
     /// Attribute to define URL segments for properties.
@@ -18,7 +18,7 @@ namespace ErgastApi.Client.Attributes
         /// </summary>
         public int Order
         {
-            get => NullableOrder ?? default(int);
+            get => NullableOrder ?? default;
             set => NullableOrder = value;
         }
 

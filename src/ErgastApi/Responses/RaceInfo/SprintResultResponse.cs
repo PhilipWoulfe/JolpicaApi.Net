@@ -1,6 +1,6 @@
-﻿using ErgastApi.Responses.Models.RaceInfo;
+﻿using JolpiApi.Responses.Models.RaceInfo;
 
-namespace ErgastApi.Responses
+namespace JolpiApi.Responses.RaceInfo
 {
     public class SprintResultsResponse : RaceResponse<SprintWithResults>
     {
