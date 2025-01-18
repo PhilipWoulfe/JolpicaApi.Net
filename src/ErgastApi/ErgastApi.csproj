@@ -58,6 +58,15 @@
 
 	<ItemGroup>
 		<PackageReference Include="AsyncUsageAnalyzers" Version="1.0.0-alpha003" PrivateAssets="All" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EditorConfigFiles Remove="C:\Users\Phil\source\repos\PhilipWoulfe\JolpiApi.Net\src\ErgastApi\.editorconfig" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="C:\Users\Phil\source\repos\PhilipWoulfe\JolpiApi.Net\src\ErgastApi\.editorconfig" />
 	</ItemGroup>
 
 </Project>
