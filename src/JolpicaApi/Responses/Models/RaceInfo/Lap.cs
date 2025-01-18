@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace JolpiApi.Responses.Models.RaceInfo
+namespace JolpicaApi.Responses.Models.RaceInfo
 {
     /// <summary>
     /// Represents a lap in a race, including the lap number and timings for each driver.

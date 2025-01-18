@@ -1,4 +1,4 @@
-﻿namespace JolpiApi.Responses.Models
+﻿namespace JolpicaApi.Responses.Models
 {
     public enum SpeedUnit
     {

@@ -4,7 +4,7 @@
 using System.Reflection;
 #endif
 
-namespace JolpiApi.Extensions
+namespace JolpicaApi.Extensions
 {
     internal static class ReflectionExtensions
     {

@@ -1,8 +1,8 @@
 using System;
-using JolpiApi.Serialization.Converters;
+using JolpicaApi.Serialization.Converters;
 using Newtonsoft.Json;
 
-namespace JolpiApi.Responses.Models.RaceInfo
+namespace JolpicaApi.Responses.Models.RaceInfo
 {
     public class LapTiming
     {

@@ -1,9 +1,9 @@
 ﻿using System;
-using JolpiApi.Client.Attributes;
-using JolpiApi.Ids;
-using JolpiApi.Responses;
+using JolpicaApi.Client.Attributes;
+using JolpicaApi.Ids;
+using JolpicaApi.Responses;
 
-namespace JolpiApi.Requests
+namespace JolpicaApi.Requests
 {
     // ReSharper disable once UnusedTypeParameter
     /// <summary>

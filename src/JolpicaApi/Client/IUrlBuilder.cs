@@ -1,6 +1,6 @@
-﻿using JolpiApi.Requests;
+﻿using JolpicaApi.Requests;
 
-namespace JolpiApi.Client
+namespace JolpicaApi.Client
 {
     public interface IUrlBuilder
     {

@@ -2,7 +2,7 @@
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace JolpiApi.Abstractions
+namespace JolpicaApi.Abstractions
 {
     /// <summary>
     /// Default implementation of the <see cref="IHttpClient"/> interface.

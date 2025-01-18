@@ -3,15 +3,15 @@ using System.Net;
 using System.Net.Http;
 using System.Threading.Tasks;
 using FluentAssertions;
-using JolpiApi.Abstractions;
-using JolpiApi.Client;
-using JolpiApi.Client.Caching;
-using JolpiApi.Requests;
-using JolpiApi.Responses;
+using JolpicaApi.Abstractions;
+using JolpicaApi.Client;
+using JolpicaApi.Client.Caching;
+using JolpicaApi.Requests;
+using JolpicaApi.Responses;
 using NSubstitute;
 using Xunit;
 
-namespace JolpiApi.Tests.Client
+namespace JolpicaApi.Tests.Client
 {
     public class JolpiClientTests
     {

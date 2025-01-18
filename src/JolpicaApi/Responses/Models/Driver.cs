@@ -1,7 +1,7 @@
 ﻿using System;
 using Newtonsoft.Json;
 
-namespace JolpiApi.Responses.Models
+namespace JolpicaApi.Responses.Models
 {
     /// <summary>
     /// Represents a driver in the Jolpi API.

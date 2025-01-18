@@ -4,7 +4,7 @@ using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using Newtonsoft.Json.Serialization;
 
-namespace JolpiApi.Serialization.Converters
+namespace JolpicaApi.Serialization.Converters
 {
     public class JsonPathConverter : JsonConverter
     {

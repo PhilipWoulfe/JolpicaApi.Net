@@ -1,6 +1,6 @@
 using System.Collections.Generic;
 
-namespace JolpiApi.Responses.Models.Standings
+namespace JolpicaApi.Responses.Models.Standings
 {
     public abstract class StandingsList<T> where T : Standing
     {

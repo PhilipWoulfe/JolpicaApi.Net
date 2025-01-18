@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace JolpiApi.Responses.Models
+namespace JolpicaApi.Responses.Models
 {
     public class Circuit
     {

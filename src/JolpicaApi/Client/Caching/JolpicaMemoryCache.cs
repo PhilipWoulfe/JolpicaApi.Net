@@ -1,5 +1,16 @@
 using System;
-using JolpiApi.Responses;
+using JolpicaApi.Responses;
+
+
+
+/* Unmerged change from project 'JolpicaApi (net8.0)'
+Added:
+using JolpiApi;
+using JolpiApi.Client;
+using JolpiApi.Client.Caching;
+using JolpicaApi.Client.Caching;
+*/
+
 
 
 
@@ -11,10 +22,10 @@ using Microsoft.Extensions.Caching.Memory;
 using System.Runtime.Caching;
 #endif
 
-namespace JolpiApi.Client.Caching
+namespace JolpicaApi.Client.Caching
 {
     /// <summary>
-    /// Provides a memory cache for storing Ergast API responses.
+    /// Provides a memory cache for storing Jolpica API responses.
     /// </summary>
     /// <remarks>
     /// Initializes a new instance of the <see cref="JolpiMemoryCache"/> class with a specified cache entry lifetime.
@@ -25,7 +36,7 @@ namespace JolpiApi.Client.Caching
         private static readonly TimeSpan DefaultCacheEntryLifetime = TimeSpan.FromHours(1);
 
 #if NETSTANDARD
-            private MemoryCache Cache { get; set; } = new MemoryCache(new MemoryCacheOptions());
+        private MemoryCache Cache { get; set; } = new MemoryCache(new MemoryCacheOptions());
 #else
         private MemoryCache Cache { get; set; } = new MemoryCache(nameof(JolpiMemoryCache));
 #endif
@@ -80,7 +91,7 @@ namespace JolpiApi.Client.Caching
         {
             Cache.Dispose();
 #if NETSTANDARD
-                Cache = new MemoryCache(new MemoryCacheOptions());
+            Cache = new MemoryCache(new MemoryCacheOptions());
 #else
             Cache = new MemoryCache(nameof(JolpiMemoryCache));
 #endif

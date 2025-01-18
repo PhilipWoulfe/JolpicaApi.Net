@@ -1,7 +1,7 @@
-﻿using JolpiApi.Client.Attributes;
-using JolpiApi.Responses;
+﻿using JolpicaApi.Client.Attributes;
+using JolpicaApi.Responses;
 
-namespace JolpiApi.Requests.Standard
+namespace JolpicaApi.Requests.Standard
 {
     /// <summary>
     /// Represents a request for driver information.

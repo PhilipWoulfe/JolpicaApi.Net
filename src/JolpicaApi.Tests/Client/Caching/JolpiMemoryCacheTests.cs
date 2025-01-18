@@ -1,10 +1,10 @@
 ﻿using System;
 using FluentAssertions;
-using JolpiApi.Client.Caching;
-using JolpiApi.Responses;
+using JolpicaApi.Client.Caching;
+using JolpicaApi.Responses;
 using Xunit;
 
-namespace JolpiApi.Tests.Client.Caching
+namespace JolpicaApi.Tests.Client.Caching
 {
     public class JolpiMemoryCacheTests
     {

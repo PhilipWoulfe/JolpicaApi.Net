@@ -1,6 +1,6 @@
-using JolpiApi.Responses.Models.RaceInfo;
+using JolpicaApi.Responses.Models.RaceInfo;
 
-namespace JolpiApi.Responses.RaceInfo
+namespace JolpicaApi.Responses.RaceInfo
 {
     public class LapTimesResponse : RaceResponse<RaceWithLapTimes> { }
 }

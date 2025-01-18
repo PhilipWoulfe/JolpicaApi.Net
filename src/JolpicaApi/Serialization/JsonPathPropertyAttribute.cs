@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JolpiApi.Serialization
+namespace JolpicaApi.Serialization
 {
     public class JsonPathPropertyAttribute : Attribute
     {

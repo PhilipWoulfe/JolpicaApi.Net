@@ -1,8 +1,8 @@
-using JolpiApi.Client.Attributes;
-using JolpiApi.Responses;
-using JolpiApi.Responses.Models;
+using JolpicaApi.Client.Attributes;
+using JolpicaApi.Responses;
+using JolpicaApi.Responses.Models;
 
-namespace JolpiApi.Requests.Standard
+namespace JolpicaApi.Requests.Standard
 {
     /// <summary>
     /// Represents a request for finishing status information.

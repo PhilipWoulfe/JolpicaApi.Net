@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using JolpiApi.Responses.Models;
-using JolpiApi.Serialization;
+using JolpicaApi.Responses.Models;
+using JolpicaApi.Serialization;
 
-namespace JolpiApi.Responses
+namespace JolpicaApi.Responses
 {
     public class CircuitResponse : JolpiResponse
     {

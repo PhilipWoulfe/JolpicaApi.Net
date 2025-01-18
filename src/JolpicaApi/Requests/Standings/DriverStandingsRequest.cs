@@ -1,7 +1,7 @@
-using JolpiApi.Client.Attributes;
-using JolpiApi.Responses.Standings;
+using JolpicaApi.Client.Attributes;
+using JolpicaApi.Responses.Standings;
 
-namespace JolpiApi.Requests.Standings
+namespace JolpicaApi.Requests.Standings
 {
     public class DriverStandingsRequest : StandingsRequest<DriverStandingsResponse>
     {

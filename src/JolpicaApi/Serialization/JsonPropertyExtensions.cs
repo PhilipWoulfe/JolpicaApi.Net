@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Newtonsoft.Json.Serialization;
 
-namespace JolpiApi.Serialization
+namespace JolpicaApi.Serialization
 {
     public static class JsonPropertyExtensions
     {

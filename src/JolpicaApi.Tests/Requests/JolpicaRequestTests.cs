@@ -1,17 +1,17 @@
 ﻿using System;
 using FluentAssertions;
-using JolpiApi.Requests;
-using JolpiApi.Responses;
+using JolpicaApi.Requests;
+using JolpicaApi.Responses;
 using Xunit;
 
-namespace JolpiApi.Tests.Requests
+namespace JolpicaApi.Tests.Requests
 {
     public class JolpiRequestTests
     {
         private JolpiRequest<JolpiResponse> Request { get; }
         public JolpiRequestTests()
         {
-            Request = new MockErgastRequest();
+            Request = new MockJolpicaRequest();
         }
 
         [Theory]
@@ -91,7 +91,7 @@ namespace JolpiApi.Tests.Requests
             Request.Offset.Should().Be(expectedOffset);
         }
 
-        private class MockErgastRequest : JolpiRequest<JolpiResponse>
+        private class MockJolpicaRequest : JolpiRequest<JolpiResponse>
         {
 
         }

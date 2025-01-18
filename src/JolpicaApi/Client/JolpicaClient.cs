@@ -1,14 +1,14 @@
 ﻿using System;
 using System.Threading.Tasks;
-using JolpiApi.Abstractions;
-using JolpiApi.Client.Caching;
-using JolpiApi.Requests;
-using JolpiApi.Responses;
-using JolpiApi.Serialization;
+using JolpicaApi.Abstractions;
+using JolpicaApi.Client.Caching;
+using JolpicaApi.Requests;
+using JolpicaApi.Responses;
+using JolpicaApi.Serialization;
 using Microsoft.Extensions.Configuration;
 using Newtonsoft.Json;
 
-namespace JolpiApi.Client
+namespace JolpicaApi.Client
 {
     /// <inheritdoc cref="IJolpiClient"/> />
     /// <summary>
@@ -24,7 +24,7 @@ namespace JolpiApi.Client
         /// <param name="configuration">The configuration containing the API base URL.</param>
         public JolpiClient(IConfiguration configuration)
         {
-            _apiBase = configuration["ErgastApi:BaseUrl"] ?? "https://api.jolpi.ca/ergast/f1/";
+            _apiBase = configuration["JolpicaApi:BaseUrl"] ?? "https://api.jolpi.ca/ergast/f1/";
         }
 
         private JsonSerializerSettings SerializerSettings { get; } = new JsonSerializerSettings { ContractResolver = new JsonPathContractResolver() };
@@ -98,9 +98,9 @@ namespace JolpiApi.Client
             responseMessage.EnsureSuccessStatusCode();
 
             var content = await responseMessage.Content.ReadAsStringAsync().ConfigureAwait(false);
-            var rootResponse = JsonConvert.DeserializeObject<ErgastRootResponse<TResponse>>(content, SerializerSettings) 
+            var rootResponse = JsonConvert.DeserializeObject<ErgastRootResponse<TResponse>>(content, SerializerSettings)
                 ?? throw new Exception("Received an invalid response." + Environment.NewLine + "Response: " + content);
-            
+
             response = rootResponse.Data;
             Cache.AddOrReplace(url, response);
 
