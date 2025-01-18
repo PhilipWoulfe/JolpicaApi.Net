@@ -1,0 +1,12 @@
+﻿using System.Collections.Generic;
+using JolpiApi.Responses.Models;
+using JolpiApi.Serialization;
+
+namespace JolpiApi.Responses
+{
+    public class DriverResponse : JolpiResponse
+    {
+        [JsonPathProperty("DriverTable.Drivers")]
+        public IList<Driver> Drivers { get; private set; }
+    }
+}
