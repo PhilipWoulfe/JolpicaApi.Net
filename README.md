@@ -1,4 +1,4 @@
-# Ergast Developer API .NET Client
+# Jolpica Developer API .NET Client
 
 [![license](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://github.com/Krusen/ErgastApi.Net/blob/master/LICENSE.md)
 [![AppVeyor](https://ci.appveyor.com/api/projects/status/kaibsj29lcn9aqt1?svg=true)](https://ci.appveyor.com/project/Krusen/ergastapi-net)
@@ -33,19 +33,19 @@ PM> Install-Package ErgastApiClient
 
 The library is easy to use.
 
-Start by creating an `ErgastClient`. Then create on of the request types and set parameters to narrow down your query.
-Then execute the request throughe the client with the `GetResponseAsync(IErgastRequest)` method.
+Start by creating an `JolpicaClient`. Then create on of the request types and set parameters to narrow down your query.
+Then execute the request throughe the client with the `GetResponseAsync(IJolpicaRequest)` method.
 
 Below is an example of how to get the race results of the 11th race of the 2017 season.
 
 ```C#
 // Relevant imports
-using ErgastApi.Client;
-using ErgastApi.Ids;
-using ErgastApi.Requests;
+using JolpicaApi.Client;
+using JolpicaApi.Ids;
+using JolpicaApi.Requests;
 
 // The client should be stored and reused during the lifetime of your application
-var client = new ErgastClient();
+var client = new JolpicaClient();
 
 // All request properties are optional (except 'Season' if 'Round' is set)
 var request = new RaceResultsRequest
@@ -170,7 +170,7 @@ The maximum value is 1000 but please use the smallest value that you can. If not
 The `Offset` property specifies an offset into the result set (i.e. start from this position).
 If not set it defaults to zero.
 
-The response object returned from `ErgastClient.GetResponseAsync()` contains the following information to help you with paging:
+The response object returned from `JolpicaClient.GetResponseAsync()` contains the following information to help you with paging:
 
 - `Limit` and `Offset` (the values used for the response)
 - `TotalResults`
@@ -181,7 +181,7 @@ The response object returned from `ErgastClient.GetResponseAsync()` contains the
 
 ### Caching
 
-`ErgastClient` caches the response for all requests to minimize the load on the API server. Requests are cached by the resulting URL.
+`JolpicaClient` caches the response for all requests to minimize the load on the API server. Requests are cached by the resulting URL.
 
 The default cache lifetime is one hour. You can change this by setting `client.Cache.CacheEntryLifetime` to a different `TimeSpan` value.
 

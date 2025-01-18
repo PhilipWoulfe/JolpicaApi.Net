@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<TargetFrameworks>net8.0;netstandard2.1</TargetFrameworks>
+		<NetStandardImplicitPackageVersion>1.6.0</NetStandardImplicitPackageVersion>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<LangVersion>12.0</LangVersion>
+	</PropertyGroup>
+
+	<!-- Needed for code coverage -->
+	<PropertyGroup>
+		<DebugType>full</DebugType>
+	</PropertyGroup>
+
+	<PropertyGroup>
+		<PackageId>JolpicaApiClient</PackageId>
+		<Version>$(SemVer)</Version>
+		<Authors>Søren Kruse</Authors>
+		<Company />
+		<Product>JolpicaApiClient</Product>
+		<Description>A client for querying the Jolpica Developer API (http://Jolpica.com/mrd/)</Description>
+		<PackageLicenseUrl>https://github.com/Krusen/JolpicaApi.Net/blob/master/LICENSE.md</PackageLicenseUrl>
+		<PackageProjectUrl>https://github.com/Krusen/JolpicaApi.Net</PackageProjectUrl>
+		<PackageIconUrl>https://raw.githubusercontent.com/Krusen/JolpicaApi.Net/master/art/package-icon.png</PackageIconUrl>
+		<RepositoryUrl>https://github.com/Krusen/JolpicaApi.Net</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<!--<PackageReleaseNotes></PackageReleaseNotes>-->
+		<PackageTags>Jolpica;Jolpicaapi;formula1;f1</PackageTags>
+		<GeneratePackageOnBuild>True</GeneratePackageOnBuild>
+		<IncludeSource>True</IncludeSource>
+		<IncludeSymbols>True</IncludeSymbols>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<None Remove="JolpicaApi.csproj.DotSettings" />
+	</ItemGroup>
+
+	<PropertyGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+		<DefineConstants>$(DefineConstants);NETSTANDARD</DefineConstants>
+	</PropertyGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
+		<PackageReference Include="System.Runtime.Caching" Version="5.0.0" />
+		<PackageReference Include="System.Net.Http" Version="4.3.4" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+	</ItemGroup>
+
+	<ItemGroup Condition="'$(TargetFramework)' == 'netstandard2.1'">
+		<PackageReference Include="Microsoft.Extensions.Caching.Memory" Version="1.0.0" />
+		<PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+		<PackageReference Include="System.Reflection" Version="4.3.0" />
+		<PackageReference Include="System.Reflection.TypeExtensions" Version="4.3.0" />
+	</ItemGroup>
+
+	<PropertyGroup>
+		<CodeAnalysisRuleSet>JolpicaApi.ruleset</CodeAnalysisRuleSet>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="AsyncUsageAnalyzers" Version="1.0.0-alpha003" PrivateAssets="All" />
+		<PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" Version="9.0.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <EditorConfigFiles Remove="C:\Users\Phil\source\repos\PhilipWoulfe\JolpicaApi.Net\src\JolpicaApi\.editorconfig" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Include="C:\Users\Phil\source\repos\PhilipWoulfe\JolpicaApi.Net\src\JolpicaApi\.editorconfig" />
+	</ItemGroup>
+
+</Project>
