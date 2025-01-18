@@ -1,6 +1,6 @@
 using System;
 
-namespace JolpiApi.Client
+namespace JolpicaApi.Client
 {
     /// <summary>
     /// Represents a segment of a URL with an order, name, value, and terminator flag.

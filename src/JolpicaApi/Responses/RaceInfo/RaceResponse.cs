@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using JolpiApi.Responses.Models.RaceInfo;
-using JolpiApi.Serialization;
+using JolpicaApi.Responses.Models.RaceInfo;
+using JolpicaApi.Serialization;
 
-namespace JolpiApi.Responses.RaceInfo
+namespace JolpicaApi.Responses.RaceInfo
 {
     public abstract class RaceResponse<T> : JolpiResponse where T : Race
     {

@@ -1,8 +1,8 @@
 ﻿using System.Collections.Generic;
-using JolpiApi.Responses.Models;
-using JolpiApi.Serialization;
+using JolpicaApi.Responses.Models;
 
-namespace JolpiApi.Responses
+using JolpicaApi.Serialization;
+namespace JolpicaApi.Responses
 {
     public class SeasonResponse : JolpiResponse
     {

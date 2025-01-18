@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json.Serialization;
 
-namespace JolpiApi.Serialization
+namespace JolpicaApi.Serialization
 {
     public class JsonPathPropertyInfo
     {

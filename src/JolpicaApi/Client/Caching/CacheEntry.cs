@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JolpiApi.Client.Caching
+namespace JolpicaApi.Client.Caching
 {
     public class CacheEntry<T>
     {

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace JolpiApi.Extensions
+namespace JolpicaApi.Extensions
 {
     internal static class TaskExtensions
     {

@@ -1,7 +1,7 @@
-﻿using JolpiApi.Serialization;
+﻿using JolpicaApi.Serialization;
 using System.Collections.Generic;
 
-namespace JolpiApi.Responses.Standings
+namespace JolpicaApi.Responses.Standings
 {
     public abstract class StandingsResponse<T> : JolpiResponse
     {

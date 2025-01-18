@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Linq;
 using System.Reflection;
-using JolpiApi.Serialization.Converters;
+using JolpicaApi.Serialization.Converters;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 
-namespace JolpiApi.Serialization
+namespace JolpicaApi.Serialization
 {
     /// <summary>
     /// A custom contract resolver that supports JSON path properties.

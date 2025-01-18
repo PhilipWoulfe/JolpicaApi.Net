@@ -1,6 +1,6 @@
-﻿using JolpiApi.Ids;
+﻿using JolpicaApi.Ids;
 
-namespace JolpiApi.Requests
+namespace JolpicaApi.Requests
 {
     /// <summary>
     /// Common interface for all requests, which contains properties for paging and limiting results to a season, round and/or driver.

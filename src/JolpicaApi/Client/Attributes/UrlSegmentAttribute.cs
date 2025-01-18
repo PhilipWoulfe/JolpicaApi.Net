@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace JolpiApi.Client.Attributes
+namespace JolpicaApi.Client.Attributes
 {
     /// <summary>
     /// Attribute to define URL segments for properties.

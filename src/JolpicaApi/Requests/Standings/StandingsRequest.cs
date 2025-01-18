@@ -1,7 +1,7 @@
-using JolpiApi.Client.Attributes;
-using JolpiApi.Responses;
+using JolpicaApi.Client.Attributes;
+using JolpicaApi.Responses;
 
-namespace JolpiApi.Requests.Standings
+namespace JolpicaApi.Requests.Standings
 {
     public abstract class StandingsRequest<TResponse> : JolpiRequest<TResponse> where TResponse : JolpiResponse
     {

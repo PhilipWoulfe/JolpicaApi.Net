@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using Newtonsoft.Json;
 
-namespace JolpiApi.Responses.Models.Standings
+namespace JolpicaApi.Responses.Models.Standings
 {
     public class DriverStandingsList : StandingsList<DriverStanding>
     {

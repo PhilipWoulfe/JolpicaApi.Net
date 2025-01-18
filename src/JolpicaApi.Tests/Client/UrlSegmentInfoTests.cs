@@ -1,9 +1,9 @@
 ﻿using System.Collections.Generic;
 using FluentAssertions;
-using JolpiApi.Client;
+using JolpicaApi.Client;
 using Xunit;
 
-namespace JolpiApi.Tests.Client
+namespace JolpicaApi.Tests.Client
 {
     public class UrlSegmentInfoTests
     {

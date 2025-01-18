@@ -2,15 +2,15 @@
 using System.Linq;
 using System.Threading.Tasks;
 using FluentAssertions;
-using JolpiApi.Client;
-using JolpiApi.Client.Attributes;
-using JolpiApi.Requests;
-using JolpiApi.Requests.Standard;
-using JolpiApi.Responses;
-using JolpiApi.Responses.RaceInfo;
+using JolpicaApi.Client;
+using JolpicaApi.Client.Attributes;
+using JolpicaApi.Requests;
+using JolpicaApi.Requests.Standard;
+using JolpicaApi.Responses;
+using JolpicaApi.Responses.RaceInfo;
 using Xunit;
 
-namespace JolpiApi.Tests.Client
+namespace JolpicaApi.Tests.Client
 {
     public class UrlBuilderTests
     {

@@ -1,7 +1,7 @@
-using JolpiApi.Client.Attributes;
-using JolpiApi.Responses.RaceInfo;
+using JolpicaApi.Client.Attributes;
+using JolpicaApi.Responses.RaceInfo;
 
-namespace JolpiApi.Requests
+namespace JolpicaApi.Requests
 {
     /// <summary>
     /// Represents a request for pit stop information.

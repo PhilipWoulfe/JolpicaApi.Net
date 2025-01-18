@@ -1,8 +1,8 @@
 ﻿using FluentAssertions;
-using JolpiApi.Responses;
+using JolpicaApi.Responses;
 using Xunit;
 
-namespace JolpiApi.Tests.Responses
+namespace JolpicaApi.Tests.Responses
 {
     public class JolpiResponseTests
     {
@@ -16,7 +16,7 @@ namespace JolpiApi.Tests.Responses
         public void HasMorePages_TotalResultsGreaterThanLimitPlusOffset_ShouldBeTrue(int offset, int limit, int totalResults)
         {
             // Arrange
-            var response = new MockErgastResponse(offset, limit, totalResults);
+            var response = new MockJolpiResponse(offset, limit, totalResults);
 
             // Assert
             response.HasMorePages.Should().BeTrue();
@@ -35,7 +35,7 @@ namespace JolpiApi.Tests.Responses
         public void HasMorePages_TotalResultsLessThanOrEqualToLimitPlusOffset_ShouldBeFalse(int offset, int limit, int totalResults)
         {
             // Arrange
-            var response = new MockErgastResponse(offset, limit, totalResults);
+            var response = new MockJolpiResponse(offset, limit, totalResults);
 
             // Assert
             response.HasMorePages.Should().BeFalse();
@@ -49,7 +49,7 @@ namespace JolpiApi.Tests.Responses
         public void Page(int expectedPage, int offset, int limit)
         {
             // Arrange
-            var response = new MockErgastResponse(offset, limit);
+            var response = new MockJolpiResponse(offset, limit);
 
             // Assert
             response.Page.Should().Be(expectedPage);
@@ -63,7 +63,7 @@ namespace JolpiApi.Tests.Responses
         public void Page_LimitIsEqualToOrLessThanZero_ShouldBeOne(int expectedPage, int offset, int limit)
         {
             // Arrange
-            var response = new MockErgastResponse(offset, limit);
+            var response = new MockJolpiResponse(offset, limit);
 
             // Assert
             response.Page.Should().Be(expectedPage);
@@ -77,7 +77,7 @@ namespace JolpiApi.Tests.Responses
         public void Page_OffsetIsEqualToOrLessThanZero_ShouldBeOne(int expectedPage, int offset, int limit)
         {
             // Arrange
-            var response = new MockErgastResponse(offset, limit);
+            var response = new MockJolpiResponse(offset, limit);
 
             // Assert
             response.Page.Should().Be(expectedPage);
@@ -91,7 +91,7 @@ namespace JolpiApi.Tests.Responses
         public void Page_OffsetAndLimitDoesNotDivideEvenly_ShouldBeRoundedUp(int expectedPage, int offset, int limit)
         {
             // Arrange
-            var response = new MockErgastResponse(offset, limit);
+            var response = new MockJolpiResponse(offset, limit);
 
             // Assert
             response.Page.Should().Be(expectedPage);
@@ -108,7 +108,7 @@ namespace JolpiApi.Tests.Responses
         public void TotalPages_WorksAsExpected(int expectedTotalPages, int limit, int totalResults)
         {
             // Arrange
-            var response = new MockErgastResponse(limit: limit, totalResults: totalResults);
+            var response = new MockJolpiResponse(limit: limit, totalResults: totalResults);
 
             // Assert
             response.TotalPages.Should().Be(expectedTotalPages);
@@ -119,15 +119,15 @@ namespace JolpiApi.Tests.Responses
         public void TotalPages_ReturnsZeroIfLimitIsZeroOrBelow(int limit, int totalResults)
         {
             // Arrange
-            var response = new MockErgastResponse(limit: limit, totalResults: totalResults);
+            var response = new MockJolpiResponse(limit: limit, totalResults: totalResults);
 
             // Assert
             response.TotalPages.Should().Be(0);
         }
 
-        private class MockErgastResponse : JolpiResponse
+        private class MockJolpiResponse : JolpiResponse
         {
-            public MockErgastResponse(int offset = 0, int limit = 0, int totalResults = 0)
+            public MockJolpiResponse(int offset = 0, int limit = 0, int totalResults = 0)
             {
                 Offset = offset;
                 Limit = limit;
