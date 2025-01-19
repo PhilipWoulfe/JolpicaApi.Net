@@ -44,9 +44,11 @@ jobs:
       with:
         dotnet-version: '8.0.x'
 
-    - name: Install GitVersion
-      uses: gittools/actions/gitversion/execute@v0.9.12
-      id: gitversion
+    - name: Install GitVersion.Tool
+      run: dotnet tool install --global GitVersion.Tool
+ 
+    - name: Add GitVersion to PATH
+      run: echo "::add-path::$(dotnet tool list -g | grep GitVersion.Tool | awk '{print $3}')"
 
     - name: Restore dependencies
       run: dotnet restore
