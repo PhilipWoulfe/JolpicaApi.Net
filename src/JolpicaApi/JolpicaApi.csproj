@@ -7,11 +7,11 @@
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <LangVersion>12.0</LangVersion>
     <PublishRepositoryUrl>true</PublishRepositoryUrl>
-    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <!--<SymbolPackageFormat>snupkg</SymbolPackageFormat>-->
     <DebugType>full</DebugType>
     <PackageId>JolpicaApiClient</PackageId>
     <Version>$(SemVer)</Version>
-    <Authors>Søren Kruse;Philip Woulfe</Authors> <!-- Add your name here -->
+    <Authors>Søren Kruse;Philip Woulfe</Authors>
     <Company />
     <Product>JolpicaApiClient</Product>
     <Description>A client for querying the Jolpica Developer API (http://Jolpica.com/mrd/)</Description>
@@ -63,10 +63,6 @@
   <!-- Remove absolute paths -->
   <ItemGroup>
     <EditorConfigFiles Remove="..\..\..\..\..\AppData\Local\Temp\tmpF0F0.tmp.cs" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="..\..\..\..\..\AppData\Local\Temp\tmpF0F0.tmp.cs" />
   </ItemGroup>
 
 </Project>
