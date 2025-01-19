@@ -82,7 +82,7 @@ jobs:
       run: dotnet build --no-restore --configuration Release
 
     - name: Pack NuGet package
-      run: dotnet pack --no-build --configuration Release --output ./nupkg /p:PackageVersion=$(dotnet-gitversion /showvariable SemVer)
+      run: dotnet pack --no-build --configuration Release --output ./nupkg /p:PackageVersion=$(dotnet-gitversion /showvariable SemVer) -include-symbols -p:SymbolPackageFormat=snupkg 
  
     - name: Publish NuGet package
       env:
