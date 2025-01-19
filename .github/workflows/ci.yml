@@ -53,14 +53,6 @@ jobs:
       id: gitversion
       run: dotnet-gitversion /output json /showvariable SemVer
 
-    - name: Debug GitVersion output
-      run: "echo 'GitVersion SemVer: ${{ steps.gitversion.outputs.SemVer }}'"
-      continue-on-error: true
-   
-    - name: Debug GitVersion output2
-      run: "echo 'GitVersion SemVer: $(dotnet-gitversion /showvariable SemVer)'"
-      continue-on-error: true
-
     - name: Restore dependencies
       run: dotnet restore
 
