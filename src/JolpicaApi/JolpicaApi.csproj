@@ -23,7 +23,6 @@
     <PackageTags>Jolpica;Jolpicaapi;formula1;f1</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <IncludeSource>True</IncludeSource>
-    <IncludeSymbols>True</IncludeSymbols>
   </PropertyGroup>
 
   <ItemGroup>
