@@ -69,8 +69,13 @@ jobs:
 
     - name: Pack NuGet package
       run: dotnet pack --no-build --configuration Release --output ./nupkg /p:PackageVersion=$(dotnet-gitversion /showvariable SemVer)
-
+ 
     - name: Publish NuGet package
       env:
-        NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
       run: dotnet nuget push ./nupkg/*.nupkg --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json
+ 
+    - name: Publish Symbols package
+      env:
+         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
+      run: dotnet nuget push ./nupkg/*.snupkg --api-key $NUGET_API_KEY --source https://api.nuget.org/v3/index.json
