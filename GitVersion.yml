@@ -4,6 +4,9 @@ branches:
   master:
     regex: '^master$'
     label: ''
+    prevent-increment-of-merged-branch-version: true
+    tracks-release-branches: true
+    is-release-branch: true
   develop:
     regex: '^develop'
     label: 'alpha'
