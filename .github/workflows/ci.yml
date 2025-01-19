@@ -53,6 +53,14 @@ jobs:
       id: gitversion
       run: dotnet-gitversion /output json /showvariable SemVer
 
+    - name: Create Git Tag
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      run: |
+        VERSION=$(dotnet-gitversion /showvariable SemVer)
+        git tag -a "v$VERSION" -m "Release version $VERSION"
+        git push origin "v$VERSION"
+
     - name: Restore dependencies
       run: dotnet restore
 
