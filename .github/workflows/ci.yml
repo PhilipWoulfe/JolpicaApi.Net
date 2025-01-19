@@ -51,11 +51,16 @@ jobs:
 
     - name: Determine version
       id: gitversion
-      run: gitversion /output json /showvariable SemVer
+      run: dotnet-gitversion /output json /showvariable SemVer
 
     - name: Debug GitVersion output
       run: "echo 'GitVersion SemVer: ${{ steps.gitversion.outputs.SemVer }}'"
- 
+      continue-on-error: true
+   
+    - name: Debug GitVersion output2
+      run: "echo 'GitVersion SemVer: $(dotnet-gitversion /showvariable SemVer)'"
+      continue-on-error: true
+
     - name: Restore dependencies
       run: dotnet restore
 
@@ -63,7 +68,7 @@ jobs:
       run: dotnet build --no-restore --configuration Release
 
     - name: Pack NuGet package
-      run: dotnet pack --no-build --configuration Release --output ./nupkg /p:PackageVersion=${{ steps.gitversion.outputs.SemVer }}
+      run: dotnet pack --no-build --configuration Release --output ./nupkg /p:PackageVersion=$(dotnet-gitversion /showvariable SemVer)
 
     - name: Publish NuGet package
       env:
