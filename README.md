@@ -1,7 +1,7 @@
 # Jolpica Developer API .NET Client
 
 [![license](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://github.com/Krusen/ErgastApi.Net/blob/master/LICENSE.md)
-[![AppVeyor](https://ci.appveyor.com/api/projects/status/kaibsj29lcn9aqt1?svg=true)](https://ci.appveyor.com/project/Krusen/ergastapi-net)
+[![Build](https://github.com/PhilipWoulfe/JolpicaApi.Net/actions/workflows/ci.yml/badge.svg)](https://github.com/PhilipWoulfe/JolpicaApi.Net/actions/workflows/ci.yml)
 [![Coverage](https://coveralls.io/repos/github/Krusen/ErgastApi.Net/badge.svg)](https://coveralls.io/github/Krusen/ErgastApi.Net)
 [![CodeFactor](https://www.codefactor.io/repository/github/krusen/ergastapi.net/badge)](https://www.codefactor.io/repository/github/krusen/ergastapi.net)
 [![NuGet](https://buildstats.info/nuget/ergastapiclient?includePreReleases=false)](https://www.nuget.org/packages/ErgastApiClient/)
