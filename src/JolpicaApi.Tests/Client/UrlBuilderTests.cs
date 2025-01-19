@@ -185,18 +185,18 @@ namespace JolpicaApi.Tests.Client
                 sprintWithResults
             };
 
+            // Use reflection to set the private properties
             typeof(SprintResultsResponse)
-                .GetProperty("Races")//, BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public)
-                .SetValue(mockResponse, races);
-            // Use reflection to set the private SprintResults property
-            typeof(RaceResult).GetProperty("Points").SetValue(raceResult, 8.0);
-
-            typeof(SprintWithResults).GetProperty("SprintResults").SetValue(sprintWithResults, sprintResults);
-            // Use reflection to set the private SprintResults property
-
+                .GetProperty("Races")
+                .SetValue(mockResponse, races);            
             
+            typeof(RaceResult)
+                .GetProperty("Points")
+                .SetValue(raceResult, 8.0);
 
-
+            typeof(SprintWithResults)
+                .GetProperty("SprintResults")
+                .SetValue(sprintWithResults, sprintResults);
 
             mockClient.Setup(client => client.GetResponseAsync(It.IsAny<SprintResultsRequest>()))
                       .ReturnsAsync(mockResponse);
