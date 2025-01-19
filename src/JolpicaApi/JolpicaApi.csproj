@@ -15,10 +15,10 @@
     <Company />
     <Product>JolpicaApiClient</Product>
     <Description>A client for querying the Jolpica Developer API (http://Jolpica.com/mrd/)</Description>
-    <PackageLicenseUrl>https://github.com/Krusen/JolpicaApi.Net/blob/master/LICENSE.md</PackageLicenseUrl>
-    <PackageProjectUrl>https://github.com/Krusen/JolpicaApi.Net</PackageProjectUrl>
+    <PackageLicenseUrl>https://github.com/PhilipWoulfe/JolpicaApi.Net/blob/master/LICENSE.md</PackageLicenseUrl>
+    <PackageProjectUrl>https://github.com/PhilipWoulfe/JolpicaApi.Net</PackageProjectUrl>
     <PackageIconUrl>https://raw.githubusercontent.com/Krusen/JolpicaApi.Net/master/art/package-icon.png</PackageIconUrl>
-    <RepositoryUrl>https://github.com/Krusen/JolpicaApi.Net</RepositoryUrl>
+    <RepositoryUrl>https://github.com/PhilipWoulfe/JolpicaApi.Net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>Jolpica;Jolpicaapi;formula1;f1</PackageTags>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
