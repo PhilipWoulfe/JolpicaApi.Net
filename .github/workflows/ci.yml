@@ -60,7 +60,7 @@ jobs:
       run: dotnet build --no-restore --configuration Release
 
     - name: Pack NuGet package
-      run: dotnet pack --no-build --configuration Release --output ./nupkg /p:PackageVersion=${{ steps.gitversion.outputs.semVer }}
+      run: dotnet pack --no-build --configuration Release --output ./nupkg /p:PackageVersion=${{ steps.gitversion.outputs.SemVer }}
 
     - name: Publish NuGet package
       env:
