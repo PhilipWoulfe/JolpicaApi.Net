@@ -51,7 +51,7 @@ namespace JolpicaApi.Client
         /// </summary>
         /// <param name="request">The request to get the segments for.</param>
         /// <returns>A list of URL segment information.</returns>
-        private static IList<UrlSegmentInfo> GetSegments(IJolpiRequest request)
+        private static List<UrlSegmentInfo> GetSegments(IJolpiRequest request)
         {
             var segments = new List<UrlSegmentInfo>();
             var properties = request.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
