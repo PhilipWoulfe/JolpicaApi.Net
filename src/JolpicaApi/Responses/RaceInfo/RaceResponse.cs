@@ -7,6 +7,6 @@ namespace JolpicaApi.Responses.RaceInfo
     public abstract class RaceResponse<T> : JolpiResponse where T : Race
     {
         [JsonPathProperty("RaceTable.Races")]
-        public IList<T> Races { get; private set; }
+        public IList<T> Races { get; set; }
     }
 }

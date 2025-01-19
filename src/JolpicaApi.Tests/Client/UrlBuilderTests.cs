@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using FluentAssertions;
@@ -9,6 +10,9 @@ using JolpicaApi.Requests.Standard;
 using JolpicaApi.Responses;
 using JolpicaApi.Responses.RaceInfo;
 using Xunit;
+using Moq;
+using JolpicaApi.Responses.Models.RaceInfo;
+using System.Reflection;
 
 namespace JolpicaApi.Tests.Client
 {
@@ -165,15 +169,47 @@ namespace JolpicaApi.Tests.Client
             url.Should().Be("/enum/2/last.json");
         }
 
+
         [Fact]
         public async Task TestFromSprints()
         {
-            var client = new JolpiClient();
+            // Arrange
+            var mockClient = new Mock<IJolpiClient>();
+            var mockResponse = new SprintResultsResponse();
+            var raceResult = new RaceResult();
+            var sprintResults = new List<RaceResult>() { raceResult };
+            var sprintWithResults = new SprintWithResults();
+
+            var races = new List<SprintWithResults>
+            {
+                sprintWithResults
+            };
+
+            typeof(SprintResultsResponse)
+                .GetProperty("Races")//, BindingFlags.Instance | BindingFlags.NonPublic | BindingFlags.Public)
+                .SetValue(mockResponse, races);
+            // Use reflection to set the private SprintResults property
+            typeof(RaceResult).GetProperty("Points").SetValue(raceResult, 8.0);
+
+            typeof(SprintWithResults).GetProperty("SprintResults").SetValue(sprintWithResults, sprintResults);
+            // Use reflection to set the private SprintResults property
+
+            
+
+
+
+            mockClient.Setup(client => client.GetResponseAsync(It.IsAny<SprintResultsRequest>()))
+                      .ReturnsAsync(mockResponse);
+
             var request = new SprintResultsRequest
             {
                 Season = "2022"
             };
-            SprintResultsResponse response = await client.GetResponseAsync(request);
+
+            // Act
+            SprintResultsResponse response = await mockClient.Object.GetResponseAsync(request);
+
+            // Assert
             response.Races.First().SprintResults.First().Points.Should().Be(8);
         }
 
