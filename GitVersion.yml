@@ -2,12 +2,12 @@ assembly-versioning-scheme: MajorMinorPatch
 mode: Mainline
 branches:
   master:
-    tag: ''
+    label: ''
   develop:
-    tag: 'alpha'
+    label: 'alpha'
   feature:
-    tag: 'beta'
+    label: 'beta'
   release:
-    tag: 'rc'
+    label: 'rc'
 ignore:
   sha: []
