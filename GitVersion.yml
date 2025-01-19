@@ -2,12 +2,19 @@ assembly-versioning-scheme: MajorMinorPatch
 mode: ContinuousDeployment
 branches:
   master:
+    regex: '^master$'
     label: ''
   develop:
+    regex: '^develop'
     label: 'alpha'
   feature:
+    regex: '^feature[/-]'
     label: 'beta'
   release:
+    regex: '^release[/-]'
     label: 'rc'
+  bugfix:
+    regex: '^bugfix[/-]'
+    label: 'bugfix'
 ignore:
   sha: []
