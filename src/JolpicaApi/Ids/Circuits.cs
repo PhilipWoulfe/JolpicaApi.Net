@@ -2,6 +2,7 @@
 {
     /// <summary>
     /// Constants for circuit IDs. The list may not be complete or up to date.
+    /// 
     /// </summary>
     public static class Circuits
     {
