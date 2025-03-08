@@ -28,17 +28,17 @@ namespace JolpicaApi.Client.Caching
     /// Provides a memory cache for storing Jolpica API responses.
     /// </summary>
     /// <remarks>
-    /// Initializes a new instance of the <see cref="JolpiMemoryCache"/> class with a specified cache entry lifetime.
+    /// Initializes a new instance of the <see cref="JolpicaMemoryCache"/> class with a specified cache entry lifetime.
     /// </remarks>
     /// <param name="cacheEntryLifetime">The cache entry lifetime.</param>
-    public class JolpiMemoryCache(TimeSpan cacheEntryLifetime) : IJolpiCache
+    public class JolpicaMemoryCache(TimeSpan cacheEntryLifetime) : IJolpicaCache
     {
         private static readonly TimeSpan DefaultCacheEntryLifetime = TimeSpan.FromHours(1);
 
 #if NETSTANDARD
         private MemoryCache Cache { get; set; } = new MemoryCache(new MemoryCacheOptions());
 #else
-        private MemoryCache Cache { get; set; } = new MemoryCache(nameof(JolpiMemoryCache));
+        private MemoryCache Cache { get; set; } = new MemoryCache(nameof(JolpicaMemoryCache));
 #endif
 
         /// <summary>
@@ -47,9 +47,9 @@ namespace JolpicaApi.Client.Caching
         public TimeSpan CacheEntryLifetime { get; set; } = cacheEntryLifetime;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="JolpiMemoryCache"/> class with the default cache entry lifetime.
+        /// Initializes a new instance of the <see cref="JolpicaMemoryCache"/> class with the default cache entry lifetime.
         /// </summary>
-        public JolpiMemoryCache()
+        public JolpicaMemoryCache()
             : this(DefaultCacheEntryLifetime)
         {
         }
@@ -59,7 +59,7 @@ namespace JolpicaApi.Client.Caching
         /// </summary>
         /// <param name="url">The URL of the cache entry.</param>
         /// <param name="response">The response to cache.</param>
-        public void AddOrReplace(string url, JolpiResponse response)
+        public void AddOrReplace(string url, JolpicaResponse response)
         {
             Cache.Set(url, response, DateTimeOffset.UtcNow + CacheEntryLifetime);
         }
@@ -70,7 +70,7 @@ namespace JolpicaApi.Client.Caching
         /// <typeparam name="T">The type of the response.</typeparam>
         /// <param name="url">The URL of the cache entry.</param>
         /// <returns>The cached response, or null if not found.</returns>
-        public T Get<T>(string url) where T : JolpiResponse
+        public T Get<T>(string url) where T : JolpicaResponse
         {
             return Cache.Get(url) as T;
         }
@@ -93,7 +93,7 @@ namespace JolpicaApi.Client.Caching
 #if NETSTANDARD
             Cache = new MemoryCache(new MemoryCacheOptions());
 #else
-            Cache = new MemoryCache(nameof(JolpiMemoryCache));
+            Cache = new MemoryCache(nameof(JolpicaMemoryCache));
 #endif
         }
 

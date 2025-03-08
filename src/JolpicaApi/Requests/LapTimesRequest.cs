@@ -6,7 +6,7 @@ namespace JolpicaApi.Requests
     /// <summary>
     /// Represents a request for lap times data.
     /// </summary>
-    public class LapTimesRequest : JolpiRequest<LapTimesResponse>
+    public class LapTimesRequest : JolpicaRequest<LapTimesResponse>
     {
         /// <summary>
         /// Gets or sets the lap number.

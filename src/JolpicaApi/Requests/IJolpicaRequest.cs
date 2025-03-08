@@ -5,7 +5,7 @@ namespace JolpicaApi.Requests
     /// <summary>
     /// Common interface for all requests, which contains properties for paging and limiting results to a season, round and/or driver.
     /// </summary>
-    public interface IJolpiRequest
+    public interface IJolpicaRequest
     {
         /// <summary>
         /// The number of results to return. Must be between 1 and 1000.

@@ -4,7 +4,7 @@ using JolpicaApi.Serialization;
 
 namespace JolpicaApi.Responses
 {
-    public class ConstructorResponse : JolpiResponse
+    public class ConstructorResponse : JolpicaResponse
     {
         [JsonPathProperty("ConstructorTable.Constructors")]
         public IList<Constructor> Constructors { get; private set; }

@@ -6,7 +6,7 @@ namespace JolpicaApi.Requests
     /// <summary>
     /// Represents a request for pit stop information.
     /// </summary>
-    public class PitStopsRequest : JolpiRequest<PitStopsResponse>
+    public class PitStopsRequest : JolpicaRequest<PitStopsResponse>
     {
         /// <summary>
         /// Gets or sets the lap number for the pit stop request.

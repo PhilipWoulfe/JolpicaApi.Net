@@ -10,7 +10,7 @@ namespace JolpicaApi.Requests
     /// Base request class that contains properties for paging and limiting results to a season, round and/or driver.
     /// </summary>
     /// <typeparam name="TResponse">The response type returned for this kind of request.</typeparam>
-    public abstract class JolpiRequest<TResponse> : IJolpiRequest where TResponse : JolpiResponse
+    public abstract class JolpicaRequest<TResponse> : IJolpicaRequest where TResponse : JolpicaResponse
     {
         private int? _limit;
         private int? _offset;

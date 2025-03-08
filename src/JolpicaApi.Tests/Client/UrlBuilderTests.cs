@@ -213,7 +213,7 @@ namespace JolpicaApi.Tests.Client
             response.Races.First().SprintResults.First().Points.Should().Be(8);
         }
 
-        private class MockRequest : JolpiRequest<JolpiResponse>
+        private class MockRequest : JolpicaRequest<JolpicaResponse>
         {
             [UrlSegment("first", Order = 1)]
             public int? First { get; set; }
@@ -246,7 +246,7 @@ namespace JolpicaApi.Tests.Client
             public int? Last { get; set; }
         }
 
-        private class MockMultipleTerminatorsRequest : JolpiRequest<JolpiResponse>
+        private class MockMultipleTerminatorsRequest : JolpicaRequest<JolpicaResponse>
         {
             [UrlTerminator, UrlSegment]
             public int? Last { get; set; }

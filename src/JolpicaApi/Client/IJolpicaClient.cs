@@ -6,6 +6,6 @@ namespace JolpicaApi.Client
 {
     public interface IJolpiClient
     {
-        Task<T> GetResponseAsync<T>(JolpiRequest<T> request) where T : JolpiResponse;
+        Task<T> GetResponseAsync<T>(JolpicaRequest<T> request) where T : JolpicaResponse;
     }
 }

@@ -10,19 +10,19 @@ using Newtonsoft.Json;
 
 namespace JolpicaApi.Client
 {
-    /// <inheritdoc cref="IJolpiClient"/> />
+    /// <inheritdoc cref="IJolpicaClient"/> />
     /// <summary>
     /// A client for querying the Ergast API.
     /// </summary>
-    public class JolpiClient : IJolpiClient, IDisposable
+    public class JolpicaClient : IJolpiClient, IDisposable
     {
         private string _apiBase;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="JolpiClient"/> class with the specified configuration.
+        /// Initializes a new instance of the <see cref="JolpicaClient"/> class with the specified configuration.
         /// </summary>
         /// <param name="configuration">The configuration containing the API base URL.</param>
-        public JolpiClient(IConfiguration configuration)
+        public JolpicaClient(IConfiguration configuration)
         {
             _apiBase = configuration["JolpicaApi:BaseUrl"] ?? "https://api.jolpi.ca/ergast/f1/";
         }
@@ -58,22 +58,22 @@ namespace JolpicaApi.Client
         public IUrlBuilder UrlBuilder { get; set; } = new UrlBuilder();
 
         /// <summary>
-        /// Gets or sets the <see cref="IJolpiCache"/> used to cache the responses from the API.
+        /// Gets or sets the <see cref="IJolpicaCache"/> used to cache the responses from the API.
         /// </summary>
-        public IJolpiCache Cache { get; set; } = new JolpiMemoryCache();
+        public IJolpicaCache Cache { get; set; } = new JolpicaMemoryCache();
 
         /// <summary>
-        /// Creates an <see cref="JolpiClient"/> using the default API base URL.
+        /// Creates an <see cref="JolpicaClient"/> using the default API base URL.
         /// </summary>
-        public JolpiClient()
+        public JolpicaClient()
         {
         }
 
         /// <summary>
-        /// Creates an <see cref="JolpiClient"/> using the specified API base URL.
+        /// Creates an <see cref="JolpicaClient"/> using the specified API base URL.
         /// </summary>
         /// <param name="apiBase"></param>
-        public JolpiClient(string apiBase)
+        public JolpicaClient(string apiBase)
         {
             ApiBase = apiBase;
         }
@@ -84,7 +84,7 @@ namespace JolpicaApi.Client
         /// <typeparam name="TResponse">The type of the returned response.</typeparam>
         /// <param name="request">The request to execute.</param>
         /// <returns></returns>
-        public async Task<TResponse> GetResponseAsync<TResponse>(JolpiRequest<TResponse> request) where TResponse : JolpiResponse
+        public async Task<TResponse> GetResponseAsync<TResponse>(JolpicaRequest<TResponse> request) where TResponse : JolpicaResponse
         {
             var url = ApiBase + UrlBuilder.Build(request);
 
@@ -111,7 +111,7 @@ namespace JolpicaApi.Client
         /// Ensures the request is valid and otherwise throws an exception.
         /// </summary>
         /// <exception cref="InvalidOperationException">The request is invalid</exception>
-        protected static void EnsureValidRequest(IJolpiRequest request)
+        protected static void EnsureValidRequest(IJolpicaRequest request)
         {
             if (request?.Round != null && request?.Season == null)
                 throw new InvalidOperationException("When specifying ErgastRequest.Round you also have to specify ErgastRequest.Season.");

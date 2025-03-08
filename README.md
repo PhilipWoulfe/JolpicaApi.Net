@@ -1,31 +1,37 @@
 # Jolpica Developer API .NET Client
 
-[![license](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://github.com/Krusen/ErgastApi.Net/blob/master/LICENSE.md)
-[![AppVeyor](https://ci.appveyor.com/api/projects/status/kaibsj29lcn9aqt1?svg=true)](https://ci.appveyor.com/project/Krusen/ergastapi-net)
-[![Coverage](https://coveralls.io/repos/github/Krusen/ErgastApi.Net/badge.svg)](https://coveralls.io/github/Krusen/ErgastApi.Net)
-[![CodeFactor](https://www.codefactor.io/repository/github/krusen/ergastapi.net/badge)](https://www.codefactor.io/repository/github/krusen/ergastapi.net)
-[![NuGet](https://buildstats.info/nuget/ergastapiclient?includePreReleases=false)](https://www.nuget.org/packages/ErgastApiClient/)
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2FKrusen%2FErgastApi.Net.svg?type=shield)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2FKrusen%2FErgastApi.Net?ref=badge_shield)
+[![license](https://img.shields.io/badge/license-Unlicense-blue.svg)](https://github.com/PhilipWoulfe/JolpicaApi.Net/blob/master/LICENSE.md)
+[![Build](https://github.com/PhilipWoulfe/JolpicaApi.Net/actions/workflows/ci.yml/badge.svg)](https://github.com/PhilipWoulfe/JolpicaApi.Net/actions/workflows/ci.yml)
 
-This a C# library wrapping the Ergast Developer API (http://ergast.com/mrd).
+## Credit
+
+This is a fork of the [ErgastApi.Net](https://github.com/Krusen/ErgastApi.Net) nuget package by Søren Kruse. 
+
+The only changes I have made are updating the .NET framework to 8.0, changing the API url to a configurable appsetting and updating the list of drivers, constructors and race venues.
+
+I also changed most of the references to Ergast to Jolpica, which was probably a mistake. Oh well.
+
+## Information
+
+This a C# library wrapping the Jolpica Developer API (https://github.com/jolpica/jolpica-f1, https://api.jolpi.ca/ergast/f1/).
 
 The library makes it easy to explore and use the API and also takes care of caching the responses to minimize the load on API server.
 
-he Ergast Developer API is an experimental web service which provides access a historical record of motor racing data for non-commercial purposes.
-Please read the [terms and conditions of use](http://ergast.com/mrd/terms).
+The Jolpica Developer API is an experimental web service which provides access a historical record of motor racing data for non-commercial purposes.
+Please read the [documentation](https://github.com/jolpica/jolpica-f1/blob/main/docs/README.md).
 
 The API provides data for the Formula One series, from the beginning of the world championships in 1950.
 
-Non-programmers can query the database using the [manual interface](http://ergast.com/mrd/query).
+Non-programmers can query the database using the [manual interface](https://api.jolpi.ca/ergast/).
 
 ## Installation
 
 
-Install the package **ErgastApiClient** from [NuGet](https://www.nuget.org/packages/ErgastApiClient/) 
+Install the package **JolpicaApiClient** from [NuGet](https://www.nuget.org/packages/JolpicaApiClient/) 
 or install it from the [Package Manager Console](https://docs.microsoft.com/da-dk/nuget/tools/package-manager-console):
 
 ```
-PM> Install-Package ErgastApiClient
+PM> Install-Package JolpicaApiClient
 ```
 
 
@@ -33,7 +39,7 @@ PM> Install-Package ErgastApiClient
 
 The library is easy to use.
 
-Start by creating an `JolpicaClient`. Then create on of the request types and set parameters to narrow down your query.
+Start by creating an `JolpicaClient`. Then create one of the request types and set parameters to narrow down your query.
 Then execute the request throughe the client with the `GetResponseAsync(IJolpicaRequest)` method.
 
 Below is an example of how to get the race results of the 11th race of the 2017 season.
@@ -194,5 +200,4 @@ You can clear the cache by calling `client.Cache.Clear()`.
 - Add more XML documentation for better intellisense
 - Add more unit tests
 
-## License
-[![FOSSA Status](https://app.fossa.io/api/projects/git%2Bhttps%3A%2F%2Fgithub.com%2FKrusen%2FErgastApi.Net.svg?type=large)](https://app.fossa.io/projects/git%2Bhttps%3A%2F%2Fgithub.com%2FKrusen%2FErgastApi.Net?ref=badge_large)
+

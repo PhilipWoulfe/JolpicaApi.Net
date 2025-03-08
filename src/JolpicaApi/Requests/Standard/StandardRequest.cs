@@ -4,7 +4,7 @@ using JolpicaApi.Responses.Models;
 
 namespace JolpicaApi.Requests.Standard
 {
-    public abstract class StandardRequest<TResponse> : JolpiRequest<TResponse> where TResponse : JolpiResponse
+    public abstract class StandardRequest<TResponse> : JolpicaRequest<TResponse> where TResponse : JolpicaResponse
     {
         [UrlSegment("constructors")]
         public virtual string ConstructorId { get; set; }
