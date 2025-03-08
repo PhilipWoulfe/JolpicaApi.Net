@@ -8,7 +8,7 @@ namespace JolpicaApi.Tests.Requests
 {
     public class JolpiRequestTests
     {
-        private JolpiRequest<JolpiResponse> Request { get; }
+        private JolpicaRequest<JolpicaResponse> Request { get; }
         public JolpiRequestTests()
         {
             Request = new MockJolpicaRequest();
@@ -91,7 +91,7 @@ namespace JolpicaApi.Tests.Requests
             Request.Offset.Should().Be(expectedOffset);
         }
 
-        private class MockJolpicaRequest : JolpiRequest<JolpiResponse>
+        private class MockJolpicaRequest : JolpicaRequest<JolpicaResponse>
         {
 
         }

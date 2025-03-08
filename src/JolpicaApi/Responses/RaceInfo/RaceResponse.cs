@@ -4,7 +4,7 @@ using JolpicaApi.Serialization;
 
 namespace JolpicaApi.Responses.RaceInfo
 {
-    public abstract class RaceResponse<T> : JolpiResponse where T : Race
+    public abstract class RaceResponse<T> : JolpicaResponse where T : Race
     {
         [JsonPathProperty("RaceTable.Races")]
         public IList<T> Races { get; set; }

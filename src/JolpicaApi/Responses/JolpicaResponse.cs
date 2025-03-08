@@ -8,7 +8,7 @@ namespace JolpicaApi.Responses
     /// Base class for responses returned from the Jolpica API.
     /// It contains properties for the request URL, the limit and offset used, and the total number of results for the request.
     /// </summary>
-    public abstract class JolpiResponse
+    public abstract class JolpicaResponse
     {
         /// <summary>
         /// The URL used for the request.

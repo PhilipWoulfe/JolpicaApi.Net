@@ -13,11 +13,11 @@ using Xunit;
 
 namespace JolpicaApi.Tests.Client
 {
-    public class JolpiClientTests
+    public class JolpicaClientTests
     {
-        private JolpiClient Client { get; }
+        private JolpicaClient Client { get; }
 
-        private IJolpiCache Cache { get; }
+        private IJolpicaCache Cache { get; }
 
         private IUrlBuilder UrlBuilder { get; }
 
@@ -25,11 +25,11 @@ namespace JolpicaApi.Tests.Client
 
         private HttpResponseMessage ResponseMessage { get; }
 
-        private JolpiRequest<JolpiResponse> NullRequest { get; } = null;
+        private JolpicaRequest<JolpicaResponse> NullRequest { get; } = null;
 
-        public JolpiClientTests()
+        public JolpicaClientTests()
         {
-            Cache = Substitute.For<IJolpiCache>();
+            Cache = Substitute.For<IJolpicaCache>();
             UrlBuilder = Substitute.For<IUrlBuilder>();
             HttpClient = Substitute.For<IHttpClient>();
             ResponseMessage = new HttpResponseMessage
@@ -39,7 +39,7 @@ namespace JolpicaApi.Tests.Client
 
             HttpClient.GetAsync(null).ReturnsForAnyArgs(x => ResponseMessage);
 
-            Client = new JolpiClient
+            Client = new JolpicaClient
             {
                 Cache = Cache,
                 UrlBuilder = UrlBuilder,
@@ -51,7 +51,7 @@ namespace JolpicaApi.Tests.Client
         public void Constructor_WithApiBase_SetsApiBase()
         {
             var apiRoot = "http://example.com";
-            var client = new JolpiClient(apiRoot);
+            var client = new JolpicaClient(apiRoot);
             client.ApiBase.Should().Be(apiRoot);
         }
 
@@ -90,7 +90,7 @@ namespace JolpicaApi.Tests.Client
 
         [Theory]
         [AutoMockedData]
-        public void GetResponseAsync_RequestWithRoundWithoutSeason_ThrowsInvalidOperationException(JolpiRequest<JolpiResponse> request)
+        public void GetResponseAsync_RequestWithRoundWithoutSeason_ThrowsInvalidOperationException(JolpicaRequest<JolpicaResponse> request)
         {
             // Arrange
             request.Season = null;
@@ -105,9 +105,9 @@ namespace JolpicaApi.Tests.Client
 
         [Theory]
         [AutoMockedData]
-        public async Task GetResponseAsync_ReturnsCachedResponse(JolpiResponse expectedResponse)
+        public async Task GetResponseAsync_ReturnsCachedResponse(JolpicaResponse expectedResponse)
         {
-            Cache.Get<JolpiResponse>(null).ReturnsForAnyArgs(expectedResponse);
+            Cache.Get<JolpicaResponse>(null).ReturnsForAnyArgs(expectedResponse);
 
             var response = await Client.GetResponseAsync(NullRequest);
 
@@ -131,7 +131,7 @@ namespace JolpicaApi.Tests.Client
 
         [Theory]
         [AutoMockedData]
-        public async Task GetResponseAsync_AddsTheResponseToTheCache(JolpiRequest<JolpiResponse> request, string url)
+        public async Task GetResponseAsync_AddsTheResponseToTheCache(JolpicaRequest<JolpicaResponse> request, string url)
         {
             // Arrange
             var expectedUrl = Client.ApiBase + url;
@@ -141,7 +141,7 @@ namespace JolpicaApi.Tests.Client
             await Client.GetResponseAsync(request);
 
             // Assert
-            Cache.Received().AddOrReplace(expectedUrl, Arg.Any<JolpiResponse>());
+            Cache.Received().AddOrReplace(expectedUrl, Arg.Any<JolpicaResponse>());
         }
 
         [Theory]

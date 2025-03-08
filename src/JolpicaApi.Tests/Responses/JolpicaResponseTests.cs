@@ -125,7 +125,7 @@ namespace JolpicaApi.Tests.Responses
             response.TotalPages.Should().Be(0);
         }
 
-        private class MockJolpiResponse : JolpiResponse
+        private class MockJolpiResponse : JolpicaResponse
         {
             public MockJolpiResponse(int offset = 0, int limit = 0, int totalResults = 0)
             {

@@ -18,7 +18,7 @@ namespace JolpicaApi.Client
         /// </summary>
         /// <param name="request">The request to build the URL for.</param>
         /// <returns>The built URL as a string.</returns>
-        public string Build(IJolpiRequest request)
+        public string Build(IJolpicaRequest request)
         {
             var segments = GetSegments(request);
 
@@ -51,7 +51,7 @@ namespace JolpicaApi.Client
         /// </summary>
         /// <param name="request">The request to get the segments for.</param>
         /// <returns>A list of URL segment information.</returns>
-        private static List<UrlSegmentInfo> GetSegments(IJolpiRequest request)
+        private static List<UrlSegmentInfo> GetSegments(IJolpicaRequest request)
         {
             var segments = new List<UrlSegmentInfo>();
             var properties = request.GetType().GetProperties(BindingFlags.Instance | BindingFlags.Public | BindingFlags.NonPublic);
@@ -92,7 +92,7 @@ namespace JolpicaApi.Client
         /// <param name="property">The property to get the segment value for.</param>
         /// <param name="request">The request to get the segment value for.</param>
         /// <returns>The segment value as a string.</returns>
-        private static string GetSegmentValue(PropertyInfo property, IJolpiRequest request)
+        private static string GetSegmentValue(PropertyInfo property, IJolpicaRequest request)
         {
             var value = property.GetValue(request);
             if (value?.GetType().IsEnum() == true)
