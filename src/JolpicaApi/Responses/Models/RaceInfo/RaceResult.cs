@@ -5,6 +5,9 @@ using Newtonsoft.Json;
 
 namespace JolpicaApi.Responses.Models.RaceInfo
 {
+    /// <summary>
+    /// Represents the result of a race for a specific driver.
+    /// </summary>
     public class RaceResult : ResultBase
     {
         /// <summary>
@@ -15,6 +18,9 @@ namespace JolpicaApi.Responses.Models.RaceInfo
         [JsonProperty("positionText")]
         public string PositionText { get; private set; }
 
+        /// <summary>
+        /// Indicates if the driver retired from the race.
+        /// </summary>
         public bool Retired
         {
             get
@@ -26,6 +32,9 @@ namespace JolpicaApi.Responses.Models.RaceInfo
             }
         }
 
+        /// <summary>
+        /// Indicates if the driver was disqualified from the race.
+        /// </summary>
         public bool Disqualified => PositionText == "D";
 
         /// <summary>
@@ -33,6 +42,9 @@ namespace JolpicaApi.Responses.Models.RaceInfo
         /// </summary>
         public bool Classified => int.TryParse(PositionText, out _);
 
+        /// <summary>
+        /// Points awarded to the driver for the race.
+        /// </summary>
         [JsonProperty("points")]
         public double Points { get; private set; }
 
@@ -43,14 +55,26 @@ namespace JolpicaApi.Responses.Models.RaceInfo
         [JsonProperty("grid")]
         public int Grid { get; private set; }
 
+        /// <summary>
+        /// Indicates if the driver started from the pit lane.
+        /// </summary>
         public bool StartedFromPitLane => Grid == 0;
 
+        /// <summary>
+        /// Number of laps completed by the driver.
+        /// </summary>
         [JsonProperty("laps")]
         public int Laps { get; private set; }
 
+        /// <summary>
+        /// Status text describing the finishing status of the driver.
+        /// </summary>
         [JsonProperty("status")]
         public string StatusText { get; private set; }
 
+        /// <summary>
+        /// Parsed finishing status of the driver.
+        /// </summary>
         [JsonIgnore]
         public FinishingStatusId Status => FinishingStatusIdParser.Parse(StatusText);
 

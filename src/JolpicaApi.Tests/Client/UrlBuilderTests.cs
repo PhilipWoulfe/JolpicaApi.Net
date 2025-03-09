@@ -174,7 +174,7 @@ namespace JolpicaApi.Tests.Client
         public async Task TestFromSprints()
         {
             // Arrange
-            var mockClient = new Mock<IJolpiClient>();
+            var mockClient = new Mock<IJolpicaClient>();
             var mockResponse = new SprintResultsResponse();
             var raceResult = new RaceResult();
             var sprintResults = new List<RaceResult>() { raceResult };

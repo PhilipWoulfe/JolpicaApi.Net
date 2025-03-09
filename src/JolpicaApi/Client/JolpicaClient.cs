@@ -14,7 +14,7 @@ namespace JolpicaApi.Client
     /// <summary>
     /// A client for querying the Ergast API.
     /// </summary>
-    public class JolpicaClient : IJolpiClient, IDisposable
+    public class JolpicaClient : IJolpicaClient, IDisposable
     {
         private string _apiBase;
 
