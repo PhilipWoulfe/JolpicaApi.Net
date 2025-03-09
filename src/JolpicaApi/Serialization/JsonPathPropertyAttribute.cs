@@ -2,13 +2,19 @@
 
 namespace JolpicaApi.Serialization
 {
-    public class JsonPathPropertyAttribute : Attribute
+    /// <summary>
+    /// Specifies the JSON path for a property.
+    /// </summary>
+    /// <remarks>
+    /// Initializes a new instance of the <see cref="JsonPathPropertyAttribute"/> class with the specified JSON path.
+    /// </remarks>
+    /// <param name="path">The JSON path.</param>
+    [AttributeUsage(AttributeTargets.Property, Inherited = false, AllowMultiple = false)]
+    public class JsonPathPropertyAttribute(string path) : Attribute
     {
-        public string Path { get; set; }
-
-        public JsonPathPropertyAttribute(string path)
-        {
-            Path = path;
-        }
+        /// <summary>
+        /// Gets or sets the JSON path.
+        /// </summary>
+        public string Path { get; set; } = path;
     }
 }
